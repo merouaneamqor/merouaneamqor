@@ -1,3 +1,5 @@
+  [![HitCount](https://hits.dwyl.com/merouaneamqor/merouaneamqor.svg?style=flat-square)](http://hits.dwyl.com/merouaneamqor/merouaneamqor)
+
 # Merouane Amqor
 
 <img src="https://github.com/merouaneamqor/merouaneamqor/blob/master/1650384936340.jpg" alt="Merouane's photo" title="Merouane's photo" width="150" height="150">
