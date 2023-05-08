@@ -69,7 +69,7 @@ _Casablanca_
 ### Certified ScrumMaster®
 _Scrum Alliance_  
 _Certificate ID: 001188783_  
-_Active until: April 19, 2023_
+_Active until: April 19, 2025_
 
 ### BAC+4 in Computer Science, Networks, and Multimedia
 _SUPEMIR_
