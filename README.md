@@ -19,7 +19,7 @@ Experienced Software Engineer with a demonstrated history in the tech industry. 
 - Heroku, RubyOnRails
 - MongoDB, AngularJS
 - Bootstrap, Maps, Github/Git
-- Laravel/php, Java Script, C++
+- Laravel/php, Java Script, C++, Ruby
 - Java, SQL, Vue.js, Figma
 - Adobe Tools
 
