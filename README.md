@@ -36,7 +36,7 @@ Experienced Software Engineer with a demonstrated history in the tech industry. 
 
 ### DabaDoc
 _September 2018 - April 2022_  
-_Full Stack Developer and Head of IT Team_  
+_Full Stack Developer_  
 _Casablanca_
 
 - Led a team of developers and designers, guiding them towards creating impactful features and testing them
