@@ -1,7 +1,10 @@
 # Merouane Amqor
-_Email_: marouane.amqor@gmail.com  
-_Phone_: +212 7 01 08 67 26  
-_Location_: Casablanca
+
+<img src="https://github.com/merouaneamqor/merouaneamqor/blob/master/1650384936340.jpg" alt="Merouane's photo" title="Merouane's photo" width="150" height="150">
+
+**Email**: marouane.amqor@gmail.com  
+**Phone**: +212 7 01 08 67 26  
+**Location**: Casablanca
 
 ## Professional Summary
 Experienced Software Engineer with a demonstrated history in the tech industry. Proficient in a variety of platforms, languages, and embedded systems. Strong engineering professional with a focus on understanding the requirements of the market and the available technology stacks. Skilled in developing effective solutions and strategies that meet business needs and drive business growth.
