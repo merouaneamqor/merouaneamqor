@@ -1,80 +1,76 @@
   [![HitCount](https://hits.dwyl.com/merouaneamqor/merouaneamqor.svg?style=flat-square)](http://hits.dwyl.com/merouaneamqor/merouaneamqor)
 
-# Merouane Amqor
+# Merouane AMQOR
 
-<img src="https://github.com/merouaneamqor/merouaneamqor/blob/master/1650384936340.jpg" alt="Merouane's photo" title="Merouane's photo" width="150" height="150">
+Ruby on Rails Developer | Certified ScrumMaster®
 
-**Email**: marouane.amqor@gmail.com  
-**Phone**: +212 7 01 08 67 26  
-**Location**: Casablanca
+**LinkedIn:** [linkedin.com/in/merouane-amqor](http://linkedin.com/in/merouane-amqor)
+
+**Email:** marouane.amqor@gmail.com
+
+**Phone:** +212701086726
+
+**Location:** Casablanca, Morocco
 
 ## Professional Summary
-Experienced Software Engineer with a demonstrated history in the tech industry. Proficient in a variety of platforms, languages, and embedded systems. Strong engineering professional with a focus on understanding the requirements of the market and the available technology stacks. Skilled in developing effective solutions and strategies that meet business needs and drive business growth.
+Experienced Software Engineer with a strong focus on Ruby on Rails and a demonstrated history in the tech industry. Skilled in a variety of platforms, languages, and embedded systems, with a particular proficiency in back-end development. Strong leadership skills, experienced in leading teams towards achieving common goals, and adept at designing solutions based on market requirements and technology stacks.
 
 ## Skills
+- Proficient in Ruby on Rails development
+- Expertise in Agile methodologies
+- Experienced team leader
+- Skilled in back-end deployment and rapid prototyping
+- Proficient in conducting research and designing solutions
+- Market Research and Benchmarking
 
-- Leadership: Experienced in leading teams to work towards a common goal
-- Research and Design: Proficient in conducting research and designing solutions based on findings
-- Agile Methods: Expert in implementing Agile methodologies in project management
-- Back-end Deployment: Skilled in deploying robust back-end systems
-- Rapid Prototyping: Capable of creating efficient prototypes for projects
+## Tools and Technologies
+- Ruby on Rails, MongoDB, AngularJS, Bootstrap, Git/Github
+- Laravel/PHP, JavaScript, C++, Ruby, Java, SQL, Vue.js
+- Figma, Adobe Tools
+- Heroku (Cloud Services)
 
-### Tools and Technologies
+## Professional Experience
+**DabaDoc, Casablanca, Morocco**
 
-- Heroku, RubyOnRails
-- MongoDB, AngularJS
-- Bootstrap, Maps, Github/Git
-- Laravel/php, Java Script, C++, Ruby
-- Java, SQL, Vue.js, Figma
-- Adobe Tools
+*Full-stack Developer*
 
-### Other Skills
+September 2018 - April 2022
+- Led a team of developers, delivering impactful features using Ruby on Rails.
+- Collaborated with the marketing team to enhance brand awareness.
+- Deployed robust back-end systems, improving user experience and engagement.
 
-- Market Research and Benchmarking: Proficient in conducting market research and benchmarking analysis
+**Co-founder, Meram / Texam**
 
-### Languages
+2018 - 2019
+- Initiated and designed an e-commerce web application using Ruby on Rails, providing a JSON API for mobile applications.
 
+**Riad Raha, Casablanca, Morocco**
+
+*Information System Developer (1 month, 2021)*
+- Developed a real estate sales management information system, enhancing business operations.
+
+**Majorel, Casablanca, Morocco**
+
+*Back-end Developer*
+- Developed efficient information systems, enhancing service delivery for Majorel's clients.
+
+**Beyond Expertise, Casablanca, Morocco**
+
+*Front-end / Back-end Developer*
+- Designed engaging UI/UX web applications using Ruby on Rails for corporate clients, boosting e-commerce performance.
+
+## Education
+**BAC+4 in Computer Science, Networks, and Multimedia**
+
+*SUPEMIR, Casablanca, Morocco*
+
+## Certifications
+**Certified ScrumMaster® (CSM®)**, Scrum Alliance, Active until: April 19, 2025
+
+## Languages
 - French (professional)
 - English (professional)
+- Arabic (Native)
 
-## Experience
-
-### DabaDoc
-_September 2018 - April 2022_  
-_Full Stack Developer_  
-_Casablanca_
-
-- Led a team of developers and designers, guiding them towards creating impactful features and testing them
-- Collaborated with the marketing team, enhancing brand awareness through creative content and video series
-
-### Co-founder of Meram / Texam
-_2018 - 2019_  
-_Casablanca_
-
-- Initiated and designed an e-commerce web application, providing a JSON API for mobile applications
-
-### Information System, Riad Raha
-_1 month, 2021_  
-_Casablanca_
-
-- Developed an information system for real estate sales management, improving business operations
-
-### Back-end Developer, Majorel
-_Casablanca_
-
-- Developed and integrated efficient information systems, enhancing service delivery for Majorel's clients
-
-### Front-end / Back-end Developer, Beyond Expertise
-_Casablanca_
-
-- Designed engaging UI/UX web applications for corporate clients, boosting their e-commerce performance
-
-## Education and Certifications
-
-### Certified ScrumMaster®
-_Scrum Alliance_  
-_Certificate ID: 001188783_  
-_Active until: April 19, 2025_
-
-### BAC+4 in Computer Science, Networks, and Multimedia
-_SUPEMIR_
+## References
+Available upon request
