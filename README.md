@@ -25,9 +25,9 @@ Experienced Software Engineer with a strong focus on Ruby on Rails and a demonst
 
 ## Tools and Technologies
 - Ruby on Rails, MongoDB, AngularJS, Bootstrap, Git/Github
-- Laravel/PHP, JavaScript, C++, Ruby, Java, SQL, Vue.js
+- Laravel/PHP, JavaScript, C++, Ruby, Java, SQL, Vue.js, nuxt 
 - Figma, Adobe Tools
-- Heroku (Cloud Services)
+- Heroku (Cloud Services), AWS
 
 ## Professional Experience
 **DabaDoc, Casablanca, Morocco**
