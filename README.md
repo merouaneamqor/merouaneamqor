@@ -4,7 +4,9 @@
 
 Ruby on Rails Developer | Certified ScrumMaster®
 
-**LinkedIn:** [linkedin.com/in/merouane-amqor](http://linkedin.com/in/merouane-amqor)
+**LinkedIn:** [linkedin.com/in/merouane-amqor](https://linkedin.com/in/merouane-amqor)
+
+**Website:** [merouaneamqor.com](https://merouaneamqor.com)
 
 **Email:** marouane.amqor@gmail.com
 
