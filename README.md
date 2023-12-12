@@ -2,7 +2,7 @@
 
 # Merouane AMQOR
 
-Ruby on Rails Developer | Certified ScrumMaster®
+Software engineer | Certified ScrumMaster®
 
 **LinkedIn:** [linkedin.com/in/merouane-amqor](https://linkedin.com/in/merouane-amqor)
 
@@ -15,10 +15,10 @@ Ruby on Rails Developer | Certified ScrumMaster®
 **Location:** Casablanca, Morocco
 
 ## Professional Summary
-Experienced Software Engineer with a strong focus on Ruby on Rails and a demonstrated history in the tech industry. Skilled in a variety of platforms, languages, and embedded systems, with a particular proficiency in back-end development. Strong leadership skills, experienced in leading teams towards achieving common goals, and adept at designing solutions based on market requirements and technology stacks.
+Experienced Software Engineer with a strong focus on Software development and a demonstrated history in the tech industry. Skilled in a variety of platforms, languages, and embedded systems, with a particular proficiency in back-end development. Strong leadership skills, experienced in leading teams towards achieving common goals, and adept at designing solutions based on market requirements and technology stacks.
 
 ## Skills
-- Proficient in Ruby on Rails development
+- Proficient in Software development
 - Expertise in Agile methodologies
 - Experienced team leader
 - Skilled in back-end deployment and rapid prototyping
