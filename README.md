@@ -1,8 +1,7 @@
   [![HitCount](https://hits.dwyl.com/merouaneamqor/merouaneamqor.svg?style=flat-square)](http://hits.dwyl.com/merouaneamqor/merouaneamqor)
 
 # Merouane AMQOR
-
-Software engineer | Certified ScrumMaster®
+_I don’t do ifs, buts, and maybes, I do absolutes._ | _Software engineer | Certified ScrumMaster®_
 
 **LinkedIn:** [linkedin.com/in/merouane-amqor](https://linkedin.com/in/merouane-amqor)
 
