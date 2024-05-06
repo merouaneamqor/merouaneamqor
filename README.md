@@ -1,77 +1,61 @@
   [![HitCount](https://hits.dwyl.com/merouaneamqor/merouaneamqor.svg?style=flat-square)](http://hits.dwyl.com/merouaneamqor/merouaneamqor)
 
 # Merouane AMQOR
-_I don’t do ifs, buts, and maybes, I do absolutes._ | _Software engineer | Certified ScrumMaster®_
+_I don’t do ifs, buts, and maybes, I do absolutes._
 
-**LinkedIn:** [linkedin.com/in/merouane-amqor](https://linkedin.com/in/merouane-amqor)
-
-**Website:** [merouaneamqor.com](https://merouaneamqor.com)
-
-**Email:** marouane.amqor@gmail.com
-
-**Phone:** +212701086726
-
-**Location:** Casablanca, Morocco
+### Development Team Lead @ DabaDoc | Agile Methodologies, Cloud Technologies
+**Location:** Casablanca, Morocco  
+**Email:** [marouane.amqor6@gmail.com](mailto:marouane.amqor6@gmail.com)  
+**Phone:** +212701086726  
+**LinkedIn:** [linkedin.com/in/merouane-amqor](https://www.linkedin.com/in/merouane-amqor)  
+**Personal Website:** [Merouaneamqor.com](https://Merouaneamqor.com)
 
 ## Professional Summary
-Experienced Software Engineer with a strong focus on Software development and a demonstrated history in the tech industry. Skilled in a variety of platforms, languages, and embedded systems, with a particular proficiency in back-end development. Strong leadership skills, experienced in leading teams towards achieving common goals, and adept at designing solutions based on market requirements and technology stacks.
+As a Full-stack Developer and Certified ScrumMaster, I specialize in creating cutting-edge web and mobile applications that drive the healthcare industry forward in Africa and the Middle East. My development and project management approach is rooted in decisiveness and clarity, guided by the principle: "I don’t do ifs, buts, and maybes, I do absolutes."
 
-## Skills
-- Proficient in Software development
-- Expertise in Agile methodologies
-- Experienced team leader
-- Skilled in back-end deployment and rapid prototyping
-- Proficient in conducting research and designing solutions
-- Market Research and Benchmarking
-
-## Tools and Technologies
-- Ruby on Rails, MongoDB, AngularJS, Bootstrap, Git/Github
-- Laravel/PHP, JavaScript, C++, Ruby, Java, SQL, Vue.js, nuxt 
-- Figma, Adobe Tools
-- Heroku (Cloud Services), AWS
+## Key Skills
+- **Scrum & Agile Methodologies:** Facilitate dynamic project management and foster collaboration across cross-functional teams.
+- **Web Development:** Expertise in designing and developing responsive, user-friendly web and mobile applications.
+- **Technologies:** Proficient in AngularJS, Ruby on Rails, MongoDB, React, AWS, and Heroku.
+- **Decisiveness:** Committed to making clear, impactful decisions that enhance technological solutions.
 
 ## Professional Experience
-**DabaDoc, Casablanca, Morocco**
+### Development Team Lead
+**DabaDoc, Casablanca-Settat, Morocco**  
+*January 2024 - Present*
+- Lead a talented team in developing innovative web and mobile applications for healthcare.
+- Utilize Agile methodologies, particularly Scrum, to ensure efficient project delivery.
+- Align technology solutions with company goals and maintain high performance standards.
 
-*Full-stack Developer*
+### Full-stack Developer
+**DabaDoc, Casablanca-Settat, Morocco**  
+*April 2022 - January 2024*
+- Specialize in Agile development, creating cutting-edge web and mobile applications.
+- Collaborate with marketing to align technology solutions with branding initiatives.
+- Utilize a variety of technologies including Ruby on Rails, AngularJS, and React.
 
-September 2018 - April 2022
-- Led a team of developers, delivering impactful features using Ruby on Rails.
-- Collaborated with the marketing team to enhance brand awareness.
-- Deployed robust back-end systems, improving user experience and engagement.
+### Digital Consultant (Freelance)
+**Casablanca-Settat, Morocco**  
+*July 2022 - November 2022*
+- Provided expert digital consulting services, helping clients maximize their digital presence and develop strategic technology solutions.
 
-**Co-founder, Meram / Texam**
-
-2018 - 2019
-- Initiated and designed an e-commerce web application using Ruby on Rails, providing a JSON API for mobile applications.
-
-**Riad Raha, Casablanca, Morocco**
-
-*Information System Developer (1 month, 2021)*
-- Developed a real estate sales management information system, enhancing business operations.
-
-**Majorel, Casablanca, Morocco**
-
-*Back-end Developer*
-- Developed efficient information systems, enhancing service delivery for Majorel's clients.
-
-**Beyond Expertise, Casablanca, Morocco**
-
-*Front-end / Back-end Developer*
-- Designed engaging UI/UX web applications using Ruby on Rails for corporate clients, boosting e-commerce performance.
+### Software Engineer
+**Majorel, Casablanca-Settat, Morocco**  
+*May 2020 - April 2022*
+- Focused on software engineering with a specialization in front-end development, utilizing Git and other collaborative tools.
 
 ## Education
-**BAC+4 in Computer Science, Networks, and Multimedia**
+**SUPEMIR, Casablanca**  
+*Bachelor of Science in Computer Science, Networks, and Multimedia, 2019 - 2021*
 
-*SUPEMIR, Casablanca, Morocco*
+**IPI Institut Poly Informatique**  
+*Web and Mobile Application Development, 2017 - 2021*
 
 ## Certifications
-**Certified ScrumMaster® (CSM®)**, Scrum Alliance, Active until: April 19, 2025
+- **Certified ScrumMaster® (CSM)**, Active until April 19, 2025
+- **AWS Academy Graduate - Machine Learning Foundations**
 
 ## Languages
-- French (professional)
-- English (professional)
-- Arabic (Native)
-
-## References
-Available upon request
+- **French:** Professional
+- **English:** Professional
+- **Arabic:** Native
