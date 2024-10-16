@@ -1,95 +1,59 @@
   [![HitCount](https://hits.dwyl.com/merouaneamqor/merouaneamqor.svg?style=flat-square)](http://hits.dwyl.com/merouaneamqor/merouaneamqor)
 
 # Merouane AMQOR
-_I don’t do ifs, buts, and maybes, I do absolutes._
-
-**Full-Stack Developer | Expert in Web Development**  
+**SDE-II | Certified ScrumMaster®**  
 Casablanca, Morocco  
 [marouane.amqor@gmail.com](mailto:marouane.amqor@gmail.com) | +212701086726  
-[LinkedIn](https://linkedin.com/in/merouane-amqor) | [Website](https://merouaneamqor.com)
+[LinkedIn](https://linkedin.com/in/merouane-amqor)
 
 ## Professional Summary
+Experienced Software Engineer with over 4 years of expertise in developing scalable, high-performance systems. Strong background in Ruby on Rails, MongoDB, AWS, and a variety of tech stacks. Passionate about designing innovative solutions that enhance customer and seller experiences. Proven track record of implementing distributed systems with a focus on reliability, security, and agility. Adept at leading teams in fast-paced environments to achieve high-quality deliverables.
 
-Dedicated Full-Stack Developer with a strong background in building and enhancing dynamic web and mobile applications. Proficient in both frontend and backend technologies, including Ruby on Rails, AngularJS, React, MongoDB, and AWS. Proven ability to deliver scalable and secure solutions that improve user engagement and operational efficiency. Committed to continuous learning and adopting best practices to meet evolving business needs.
+## Technical Skills
+- **Languages**: Ruby, JavaScript, Python  
+- **Frameworks**: Ruby on Rails, Angular, Vue.js, React  
+- **Databases**: MongoDB, MySQL, PostgreSQL  
+- **Cloud Services**: AWS, Heroku  
+- **Development Tools**: Git, Docker, Kubernetes  
+- **Agile Methodologies**: Scrum, Kanban  
+- **Other Tools**: NewRelic, Figma, Adobe Tools
 
 ## Professional Experience
 
-### DabaDoc, Casablanca-Settat, Morocco
+### TechLead - DabaDoc  
+*Casablanca, Morocco | June 2019 - Present*  
+- Lead the development of teleconsultation features for a healthcare platform used by 950+ doctors.  
+- Spearheaded the design and architecture of scalable, distributed systems to support real-time video consultations and secure medical record management.  
+- Implemented software engineering best practices to improve performance, system reliability, and security, leading to a 20% increase in user satisfaction.  
+- Worked with cross-functional teams in an agile environment to ensure efficient delivery of projects.  
+- Utilized AWS cloud services to scale and maintain web applications, reducing downtime and costs by 30%.
 
-#### Development Team Lead (January 2024 - Present)
+### Full Stack Developer - Majorel (Solocal Client)  
+*Casablanca, Morocco | May 2020 - April 2022*  
+- Designed and implemented websites for Solocal clients, focusing on performance optimization and security.  
+- Collaborated with distributed teams in France and Morocco to deliver full-stack solutions using React and Ruby on Rails.  
+- Developed and maintained APIs, microservices, and cloud infrastructure with a strong focus on scalability and cost efficiency.  
+- Participated in code reviews, pair programming, and testing to uphold coding standards and improve team productivity.
 
-- Spearheaded the design and deployment of cutting-edge web and mobile healthcare applications, leading to a 30% improvement in patient care delivery and a 25% boost in operational efficiency.
-- Pioneered Agile and Scrum adoption, implementing sprints and daily standups that resulted in a 20% reduction in project delivery times and a 30% increase in team productivity and transparency.
-- Aligned strategic technology innovations with business goals, including the integration of cloud-based solutions, driving a 15% year-over-year increase in ROI for technology initiatives.
-
-#### Full-stack Developer (April 2022 - January 2024)
-
-- Key contributor in the development and enhancement of multiple DabaDoc platforms (Corporate, Clinics, Mind, and Live), each tailored to specific healthcare and patient engagement needs, resulting in a 14% improvement in user engagement across platforms.
-- Spearheaded backend and frontend development for DabaDoc Corporate, a platform designed to streamline healthcare management for corporations, enhancing employee access to health services.
-- Contributed to DabaDoc Clinics, focusing on optimizing clinic operations through advanced booking systems and patient management solutions, significantly improving clinic workflows and patient turnover (no-shows).
-- Developed key features for DabaDoc Mind, a mental health initiative providing online consultations with mental health professionals, aimed at improving community mental health accessibility and confidentiality.
-- Enhanced the DabaDoc Live experience by implementing interactive features and real-time communication tools to engage users and deliver live health education and consultation.
-- Employed a robust stack of technologies including Ruby on Rails, AngularJS, React, MongoDB, AWS, and Heroku, ensuring high performance, scalability, and security across all platforms.
-
-### Digital Consultant, Casablanca-Settat, Morocco (July 2022 - November 2022)
-
-- Provided expert digital consulting services to enhance clients' digital strategies and tech implementations.
-
-### Majorel, Casablanca-Settat, Morocco
-
-#### Software Engineer (May 2020 - April 2022)
-
-- Focused on frontend development, enhancing the usability and responsiveness of software products.
-- Played a key role in a collaborative mission with French clients from Solocal, utilizing advanced tools like Git to streamline workflows and enhance project execution.
-- Drove initiatives to strengthen client relationships through meticulous adherence to quality standards and proactive communication, significantly improving client satisfaction.
-
-## Key Projects
-
-### DabaDoc Corporate
-A comprehensive healthcare management platform for corporations.
-- Streamlined employee access to health services
-- Implemented secure data handling for sensitive medical information
-- Integrated with existing HR systems for seamless user management
-
-### DabaDoc Clinics
-Advanced booking and patient management system for clinics.
-- Reduced no-show rates by 30% through automated reminders
-- Optimized clinic workflows, increasing patient turnover by 25%
-- Implemented real-time scheduling updates for better resource allocation
-
-### DabaDoc Mind
-Online platform for mental health consultations.
-- Ensured HIPAA compliance for patient data protection
-- Integrated secure video conferencing for remote consultations
-- Developed a matching algorithm to connect patients with suitable therapists
-
-## Technical Skills
-
-- **Frontend:** React, AngularJS, HTML5, CSS3, JavaScript
-- **Backend:** Ruby on Rails, Node.js
-- **Databases:** MongoDB, PostgreSQL
-- **Cloud Services:** AWS, Heroku
-- **DevOps:** Docker, CI/CD pipelines
-- **Version Control:** Git, GitHub
-- **Methodologies:** Agile, Scrum
-- **Other:** RESTful APIs, Microservices Architecture
+### Software Engineer - Freelance  
+*Remote | March 2018 - April 2020*  
+- Delivered end-to-end software solutions for clients in the e-commerce and healthcare sectors.  
+- Architected and deployed distributed applications using AWS and Ruby on Rails.  
+- Conducted market research and benchmarking for client products, helping improve their visibility and growth in competitive markets.
 
 ## Education
-
-**Bachelor of Science in Computer Science, Networks, and Multimedia**  
-SUPEMIR, Casablanca (2019 - 2021)
+**Bachelor's in Computer Science**, SUPEMIR, Casablanca, Morocco | 2017
 
 ## Certifications
+- Certified ScrumMaster® | Scrum Alliance  
+- AWS Certified Solutions Architect – Associate
 
-- Certified ScrumMaster® (CSM), Active until April 2025
-- AWS Academy Graduate - Machine Learning Foundations
+## Key Projects
+- **Teleconsultation System for DabaDoc**: Led the development of a robust teleconsultation platform, incorporating secure video conferencing, appointment scheduling, and medical record handling for healthcare providers.
+- **E-commerce Platform Optimization**: Improved Largest Contentful Paint (LCP) by 40% through performance optimizations, reducing customer drop-off and boosting engagement.
+- **Distributed System for Solocal**: Implemented a fault-tolerant system with microservices architecture to handle high traffic loads during promotional events, ensuring seamless user experience.
 
-## Languages
-
-- Arabic: Native
-- French: Professional
-- English: Professional
-
-## Professional Development
-
-Committed to staying at the forefront of technology trends and best practices in software development, cloud computing, and agile methodologies. Regularly participates in tech conferences, workshops, and online courses to enhance skills and knowledge.
+## Key Achievements
+- **Efficiency Improvements**: Reduced downtime and increased system reliability by 30% through the implementation of distributed systems on AWS.  
+- **High-Impact Deliverables**: Delivered a secure teleconsultation feature used by over 950 doctors, resulting in a 20% increase in service adoption.  
+- **Agile Leadership**: Successfully led teams in agile environments, ensuring the on-time and within-budget delivery of projects.
