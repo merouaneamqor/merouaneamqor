@@ -55,5 +55,5 @@ Experienced Software Engineer with over 4 years of expertise in developing scala
 
 ## Key Achievements
 - **Efficiency Improvements**: Reduced downtime and increased system reliability by 30% through the implementation of distributed systems on AWS.  
-- **High-Impact Deliverables**: Delivered a secure teleconsultation feature used by over 950 doctors, resulting in a 20% increase in service adoption.  
+- **High-Impact Deliverables**: Delivered a secure teleconsultation feature used by over 15000 doctors, resulting in a 20% increase in service adoption.  
 - **Agile Leadership**: Successfully led teams in agile environments, ensuring the on-time and within-budget delivery of projects.
