@@ -3,6 +3,7 @@
 
 ![Rails Logo](https://guides.rubyonrails.org/images/logo_rails-circle.svg)
 
+[![GitHub Streak](https://streak-stats.demolab.com/?user=merouaneamqor)](https://git.io/streak-stats)
 ### PROFESSIONAL SUMMARY
 Tech Lead with 3+ years of experience in software development, specializing in Ruby on Rails and API integration. Proven track record of designing scalable systems and optimizing performance.
 
