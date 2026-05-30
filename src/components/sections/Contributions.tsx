@@ -15,6 +15,11 @@ function OrgItem({ org }: { org: typeof orgs[number] }) {
         alt={org.name}
         className="h-5 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
       />
+      {!org.wordmark && (
+        <span className="text-sm font-medium whitespace-nowrap" style={{ color: "var(--text-muted)" }}>
+          {org.name}
+        </span>
+      )}
     </a>
   );
 }
