@@ -1,13 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-
-const stats = [
-  { value: 10,  suffix: "+", label: "Years Exp." },
-  { value: 80,  suffix: "+", label: "Projects Done" },
-  { value: 40,  suffix: "+", label: "Happy Clients" },
-  { value: 100, suffix: "%", label: "Satisfaction" },
-];
+import { stats, badges } from "@/data/hero";
 
 function CountUp({ target, suffix }: { target: number; suffix: string }) {
   const [count, setCount] = useState(0);
@@ -34,24 +28,25 @@ function CountUp({ target, suffix }: { target: number; suffix: string }) {
   return <span ref={ref}>{count}{suffix}</span>;
 }
 
-const badges = [
-  { label: "Ruby on Rails", color: "text-rose-400 border-rose-500/20 bg-rose-500/8" },
-  { label: "Next.js",       color: "text-blue-400 border-blue-500/20 bg-blue-500/8" },
-  { label: "SaaS",          color: "text-indigo-400 border-indigo-500/20 bg-indigo-500/8" },
-  { label: "AI Integration",color: "text-cyan-400 border-cyan-500/20 bg-cyan-500/8" },
-  { label: "PostgreSQL",    color: "text-emerald-400 border-emerald-500/20 bg-emerald-500/8" },
-  { label: "TypeScript",    color: "text-blue-300 border-blue-400/20 bg-blue-400/8" },
-  { label: "AWS",           color: "text-amber-400 border-amber-500/20 bg-amber-500/8" },
-  { label: "Docker",        color: "text-sky-400 border-sky-500/20 bg-sky-500/8" },
-];
+
+const ServiceIcon = ({ id }: { id: string }) => {
+  const cls = "w-3.5 h-3.5";
+  if (id === "globe") return <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><circle cx="12" cy="12" r="10"/><path strokeLinecap="round" d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>;
+  if (id === "arrow-up") return <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 10l7-7 7 7M12 3v18"/></svg>;
+  if (id === "cube") return <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0v10l-8 4m0-14L4 17m8 4V10"/></svg>;
+  if (id === "chip") return <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><rect x="7" y="7" width="10" height="10" rx="1"/><path strokeLinecap="round" d="M9 7V4M12 7V4M15 7V4M9 20v-3M12 20v-3M15 20v-3M7 9H4M7 12H4M7 15H4M20 9h-3M20 12h-3M20 15h-3"/></svg>;
+  if (id === "users") return <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path strokeLinecap="round" d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>;
+  if (id === "link") return <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path strokeLinecap="round" d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>;
+  return null;
+};
 
 const services = [
-  { icon: "🌐", label: "Websites" },
-  { icon: "🚀", label: "Landing Pages" },
-  { icon: "⚙️", label: "SaaS Products" },
-  { icon: "🤖", label: "AI Integration" },
-  { icon: "🧭", label: "Tech Leadership" },
-  { icon: "🔗", label: "API & Integrations" },
+  { icon: "globe",    label: "Websites" },
+  { icon: "arrow-up", label: "Landing Pages" },
+  { icon: "cube",     label: "SaaS Products" },
+  { icon: "chip",     label: "AI Integration" },
+  { icon: "users",    label: "Tech Leadership" },
+  { icon: "link",     label: "API & Integrations" },
 ];
 
 const TYPEWRITER_TEXT = "That Convert";
@@ -198,7 +193,7 @@ export default function Hero() {
                 >
                   {/* shimmer on hover */}
                   <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer" />
-                  <span className="relative">{s.icon}</span>
+                  <span className="relative"><ServiceIcon id={s.icon} /></span>
                   <span className="relative">{s.label}</span>
                 </span>
               ))}
@@ -241,7 +236,10 @@ export default function Hero() {
                 </a>
               ))}
               <span className="text-slate-700">·</span>
-              <span className="text-xs text-slate-500">📍 Casablanca, Morocco</span>
+              <span className="text-xs text-slate-500 flex items-center gap-1">
+                <svg className="w-3 h-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                Casablanca, Morocco
+              </span>
             </div>
           </div>
 

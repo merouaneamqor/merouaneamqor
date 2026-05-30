@@ -1,8 +1,29 @@
 "use client";
 
+import { services, serviceHighlights } from "@/data/services";
+
+const ServiceIcon = ({ id }: { id: string }) => {
+  const cls = "w-6 h-6";
+  if (id === "globe") return <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}><circle cx="12" cy="12" r="10"/><path strokeLinecap="round" d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>;
+  if (id === "arrow-up") return <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}><path strokeLinecap="round" strokeLinejoin="round" d="M5 10l7-7 7 7M12 3v18"/></svg>;
+  if (id === "cube") return <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}><path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0v10l-8 4m0-14L4 17m8 4V10"/></svg>;
+  if (id === "chip") return <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}><rect x="7" y="7" width="10" height="10" rx="1"/><path strokeLinecap="round" d="M9 7V4M12 7V4M15 7V4M9 20v-3M12 20v-3M15 20v-3M7 9H4M7 12H4M7 15H4M20 9h-3M20 12h-3M20 15h-3"/></svg>;
+  if (id === "link") return <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}><path strokeLinecap="round" d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path strokeLinecap="round" d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>;
+  if (id === "compass") return <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}><circle cx="12" cy="12" r="10"/><path strokeLinecap="round" d="M16.24 7.76l-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></svg>;
+  return null;
+};
+
+const StatsIcon = ({ id }: { id: string }) => {
+  const cls = "w-6 h-6";
+  if (id === "bolt") return <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}><path strokeLinecap="round" strokeLinejoin="round" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>;
+  if (id === "globe") return <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}><circle cx="12" cy="12" r="10"/><path strokeLinecap="round" d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>;
+  if (id === "handshake") return <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>;
+  return null;
+};
+
 const services = [
   {
-    emoji: "🌐",
+    icon: "globe",
     color: "blue",
     title: "Website Design & Development",
     tagline: "Stunning, fast, conversion-focused websites",
@@ -17,7 +38,7 @@ const services = [
     cta: "From $1,500 / project",
   },
   {
-    emoji: "🚀",
+    icon: "arrow-up",
     color: "emerald",
     title: "Landing Pages",
     tagline: "Pages that turn visitors into customers",
@@ -32,7 +53,7 @@ const services = [
     cta: "From $600 / page",
   },
   {
-    emoji: "⚙️",
+    icon: "cube",
     color: "indigo",
     title: "SaaS Product Development",
     tagline: "Full-stack SaaS from idea to production",
@@ -47,7 +68,7 @@ const services = [
     cta: "From $5,000 / MVP",
   },
   {
-    emoji: "✨",
+    icon: "chip",
     color: "cyan",
     title: "AI Integration",
     tagline: "Practical AI with measurable ROI",
@@ -62,7 +83,7 @@ const services = [
     cta: "From $140 / hr",
   },
   {
-    emoji: "🔗",
+    icon: "link",
     color: "violet",
     title: "API & SaaS Integrations",
     tagline: "Connect any tools your business needs",
@@ -77,7 +98,7 @@ const services = [
     cta: "From $120 / hr",
   },
   {
-    emoji: "🧭",
+    icon: "compass",
     color: "amber",
     title: "Tech Leadership & Advisory",
     tagline: "Fractional CTO & Engineering Lead",
@@ -93,30 +114,30 @@ const services = [
   },
 ];
 
-const colors: Record<string, { pill: string; dot: string; glow: string }> = {
-  blue:    { pill: "bg-blue-500/10 text-blue-300 border-blue-500/20",     dot: "bg-blue-500",    glow: "group-hover:shadow-blue-500/10" },
-  indigo:  { pill: "bg-indigo-500/10 text-indigo-300 border-indigo-500/20",  dot: "bg-indigo-500",  glow: "group-hover:shadow-indigo-500/10" },
-  violet:  { pill: "bg-violet-500/10 text-violet-300 border-violet-500/20",  dot: "bg-violet-500",  glow: "group-hover:shadow-violet-500/10" },
-  cyan:    { pill: "bg-cyan-500/10 text-cyan-300 border-cyan-500/20",     dot: "bg-cyan-500",    glow: "group-hover:shadow-cyan-500/10" },
-  emerald: { pill: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20", dot: "bg-emerald-500", glow: "group-hover:shadow-emerald-500/10" },
-  amber:   { pill: "bg-amber-500/10 text-amber-300 border-amber-500/20",   dot: "bg-amber-500",   glow: "group-hover:shadow-amber-500/10" },
+const colors: Record<string, { pill: string; dot: string }> = {
+  blue:    { pill: "bg-blue-500/10 text-blue-400 border-blue-500/20",       dot: "bg-blue-500" },
+  indigo:  { pill: "bg-indigo-500/10 text-indigo-400 border-indigo-500/20", dot: "bg-indigo-500" },
+  violet:  { pill: "bg-violet-500/10 text-violet-400 border-violet-500/20", dot: "bg-violet-500" },
+  cyan:    { pill: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",       dot: "bg-cyan-500" },
+  emerald: { pill: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20", dot: "bg-emerald-500" },
+  amber:   { pill: "bg-amber-500/10 text-amber-400 border-amber-500/20",   dot: "bg-amber-500" },
 };
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 relative">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.07] to-transparent" />
+    <section id="services" className="py-16 relative">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--border-strong)] to-transparent" />
 
       <div className="site-container">
         <div className="text-center mb-14 max-w-2xl mx-auto">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-4">
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border mb-4" style={{ background: "var(--coral-dim)", color: "var(--coral)", borderColor: "rgba(204,87,51,0.2)" }}>
             Services
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-3">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3" style={{ color: "var(--text)" }}>
             Everything You Need to{" "}
-            <span className="text-gradient-blue">Build & Grow Online</span>
+            <span className="text-gradient-coral">Build & Grow Online</span>
           </h2>
-          <p className="text-slate-400 text-base">
+          <p className="text-base" style={{ color: "var(--text-muted)" }}>
             From a single landing page to a full SaaS platform — I deliver end-to-end across design, development, integrations, and leadership.
           </p>
         </div>
@@ -125,25 +146,25 @@ export default function Services() {
           {services.map(s => {
             const c = colors[s.color];
             return (
-              <div key={s.title} className={`card-surface rounded-2xl p-6 flex flex-col group transition-shadow duration-300 hover:shadow-xl ${c.glow}`}>
-                <div className="text-2xl mb-3">{s.emoji}</div>
-                <h3 className="text-white font-semibold text-base mb-1">{s.title}</h3>
-                <p className="text-slate-500 text-xs mb-4">{s.tagline}</p>
+              <div key={s.title} className="card-surface rounded-2xl p-6 flex flex-col group transition-shadow duration-300">
+                <div className="mb-3" style={{ color: "var(--coral)" }}><ServiceIcon id={s.icon} /></div>
+                <h3 className="font-semibold text-base mb-1" style={{ color: "var(--text)" }}>{s.title}</h3>
+                <p className="text-xs mb-4" style={{ color: "var(--text-muted)" }}>{s.tagline}</p>
 
                 <ul className="flex flex-col gap-2 flex-1">
                   {s.features.map(f => (
-                    <li key={f} className="flex items-center gap-2 text-sm text-slate-400">
+                    <li key={f} className="flex items-center gap-2 text-sm" style={{ color: "var(--text-muted)" }}>
                       <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${c.dot}`} />
                       {f}
                     </li>
                   ))}
                 </ul>
 
-                <div className="mt-5 pt-4 border-t border-white/[0.05] flex items-center justify-between">
+                <div className="mt-5 pt-4 border-t flex items-center justify-between" style={{ borderColor: "var(--border)" }}>
                   <span className={`text-xs font-semibold px-2.5 py-1 rounded-md border ${c.pill}`}>
                     {s.cta}
                   </span>
-                  <a href="#contact" className="text-xs text-slate-600 hover:text-slate-300 transition-colors">
+                  <a href="#contact" className="text-xs transition-colors hover:underline" style={{ color: "var(--text-muted)" }}>
                     Get a quote →
                   </a>
                 </div>
@@ -154,23 +175,19 @@ export default function Services() {
 
         <div className="mt-10 card-surface rounded-2xl p-6">
           <div className="grid sm:grid-cols-3 gap-6 text-center">
-            {[
-              { icon: "⚡", title: "Fast Turnaround", desc: "Landing pages in 3–7 days. MVPs in 4–8 weeks." },
-              { icon: "🌍", title: "Remote-First", desc: "Serving clients in France, UK, Germany, Morocco, and beyond." },
-              { icon: "🤝", title: "Transparent Pricing", desc: "Fixed-price projects or hourly — no surprises, ever." },
-            ].map(item => (
+            {serviceHighlights.map(item => (
               <div key={item.title} className="flex flex-col items-center gap-2">
-                <span className="text-2xl">{item.icon}</span>
-                <p className="text-sm font-semibold text-white">{item.title}</p>
-                <p className="text-xs text-slate-500">{item.desc}</p>
+                <span style={{ color: "var(--coral)" }}><StatsIcon id={item.icon} /></span>
+                <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>{item.title}</p>
+                <p className="text-xs" style={{ color: "var(--text-muted)" }}>{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
 
         <div className="mt-8 text-center">
-          <p className="text-slate-500 text-sm mb-4">Not sure what you need? Let&apos;s figure it out together — free 30-min call.</p>
-          <a href="#contact" className="inline-flex items-center gap-2 px-6 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-colors text-sm">
+          <p className="text-sm mb-4" style={{ color: "var(--text-muted)" }}>Not sure what you need? Let&apos;s figure it out together — free 30-min call.</p>
+          <a href="#contact" className="inline-flex items-center gap-2 px-6 py-2.5 text-white font-semibold rounded-xl transition-colors text-sm btn-coral">
             Book a Free Discovery Call →
           </a>
         </div>
