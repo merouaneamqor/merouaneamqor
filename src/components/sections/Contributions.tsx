@@ -14,14 +14,14 @@ function OrgItem({ org }: { org: typeof orgs[number] }) {
         <img
           src={org.logo!}
           alt={org.name}
-          className="h-8 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+          className="h-5 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
         />
       ) : (
         <>
           <img
             src={org.logo!}
             alt={org.name}
-            className="w-7 h-7 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+            className="h-5 w-5 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
           />
           <span className="text-base font-medium whitespace-nowrap" style={{ color: "var(--text-muted)" }}>
             {org.name}
