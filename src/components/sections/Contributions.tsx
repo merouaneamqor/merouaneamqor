@@ -2,47 +2,63 @@
 
 import { orgs } from "@/data/contributions";
 
+function OrgItem({ org }: { org: typeof orgs[number] }) {
+  return (
+    <a
+      href={org.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity duration-300 group shrink-0 px-8"
+    >
+      {org.wordmark ? (
+        <img
+          src={org.logo!}
+          alt={org.name}
+          className="h-8 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+        />
+      ) : (
+        <>
+          <img
+            src={org.logo!}
+            alt={org.name}
+            className="w-7 h-7 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+          />
+          <span className="text-base font-medium whitespace-nowrap" style={{ color: "var(--text-muted)" }}>
+            {org.name}
+          </span>
+        </>
+      )}
+    </a>
+  );
+}
+
 export default function Contributions() {
   return (
-    <section className="relative py-8 border-y border-[var(--border)]">
-      <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg)] via-transparent to-[var(--bg)] pointer-events-none z-10" />
+    <section className="relative py-8 border-y border-[var(--border)] overflow-hidden">
+      {/* Fade masks on edges */}
+      <div className="absolute inset-y-0 left-0 w-24 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, var(--bg), transparent)" }} />
+      <div className="absolute inset-y-0 right-0 w-24 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, var(--bg), transparent)" }} />
 
-      <div className="site-container relative z-20">
-        <p className="text-center text-xs uppercase tracking-[0.2em] text-[var(--text-muted)] mb-6 font-medium">
-          Contributed to &amp; worked with
-        </p>
+      <p className="text-center text-xs uppercase tracking-[0.2em] text-[var(--text-muted)] mb-6 font-medium relative z-20">
+        Contributed to &amp; worked with
+      </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5">
-          {orgs.map((org) => (
-            <a
-              key={org.name}
-              href={org.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2.5 opacity-35 hover:opacity-90 transition-opacity duration-300 group"
-            >
-              {org.wordmark ? (
-                <img
-                  src={org.logo!}
-                  alt={org.name}
-                  className="h-6 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                />
-              ) : (
-                <>
-                  <img
-                    src={org.logo!}
-                    alt={org.name}
-                    className="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                  />
-                  <span className="text-sm font-medium transition-colors duration-300 whitespace-nowrap" style={{ color: "var(--text-muted)" }}>
-                    {org.name}
-                  </span>
-                </>
-              )}
-            </a>
-          ))}
-        </div>
+      {/* Marquee track */}
+      <div className="flex" style={{ animation: "marquee 28s linear infinite" }}>
+        {[...orgs, ...orgs].map((org, i) => (
+          <OrgItem key={`${org.name}-${i}`} org={org} />
+        ))}
       </div>
+
+      <style>{`
+        @keyframes marquee {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          @keyframes marquee { 0%, 100% { transform: translateX(0); } }
+        }
+      `}</style>
     </section>
   );
 }
