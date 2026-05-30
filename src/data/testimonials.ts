@@ -27,7 +27,7 @@ export const testimonials = [
 
 export const testimonialStats = [
   { v: "50+",  l: "Projects Delivered" },
-  { v: "10+",  l: "Years Experience" },
+  { v: "8+",   l: "Years Experience" },
   { v: "4.9★", l: "Average Rating" },
   { v: "12+",  l: "Countries Served" },
 ];

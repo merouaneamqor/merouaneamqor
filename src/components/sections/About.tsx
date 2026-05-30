@@ -49,7 +49,7 @@ export default function About() {
                 <p>
                   I&apos;m Merouane — a{" "}
                   <span style={{ color: "var(--text)" }}>Full-Stack Developer & Team Leader R&D</span> based in{" "}
-                  <span style={{ color: "var(--text)" }}>Casablanca, Morocco</span> with 10+ years building
+                  <span style={{ color: "var(--text)" }}>Casablanca, Morocco</span> with 8+ years building
                   websites, SaaS products, and digital experiences that convert. Currently leading
                   R&D engineering teams at{" "}
                   <span style={{ color: "var(--text)", fontWeight: 600 }}>Cegid</span>, one of Europe&apos;s leading enterprise SaaS companies.

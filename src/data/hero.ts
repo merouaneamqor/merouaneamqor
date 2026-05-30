@@ -8,7 +8,7 @@ export const heroServices = [
 ];
 
 export const stats = [
-  { value: 10,  suffix: "+", label: "Years Exp." },
+  { value: 8,   suffix: "+", label: "Years Exp." },
   { value: 80,  suffix: "+", label: "Projects Done" },
   { value: 40,  suffix: "+", label: "Happy Clients" },
   { value: 100, suffix: "%", label: "Satisfaction" },

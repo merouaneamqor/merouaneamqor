@@ -166,7 +166,7 @@ export default function Hero() {
               style={{ animationDelay: "240ms" }}
             >
               <span className="font-semibold" style={{ color: "var(--text)" }}>Team Leader R&D</span> at Cegid Atlas
-              with 10+ years of experience. I help founders, startups, and businesses ship
+              with 8+ years of experience. I help founders, startups, and businesses ship
               beautiful products — from landing pages to complex SaaS platforms.
             </p>
 
@@ -280,7 +280,7 @@ export default function Hero() {
               </div>
 
               <div className="grid grid-cols-3 gap-3 text-center">
-                {["10+ Years", "80+ Projects", "5★ Rated"].map(t => (
+                {["8+ Years", "80+ Projects", "5★ Rated"].map(t => (
                   <div key={t} className="rounded-lg py-2.5 transition-all duration-300" style={{ background: "var(--bg-card-alt)", border: "1px solid var(--border)" }}>
                     <p className="font-bold text-base" style={{ color: "var(--coral)" }}>{t.split(" ")[0]}</p>
                     <p className="text-xs" style={{ color: "var(--text-muted)" }}>{t.split(" ").slice(1).join(" ")}</p>
