@@ -19,22 +19,26 @@ export default function Contributions() {
               href={org.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2.5 opacity-40 hover:opacity-100 transition-opacity duration-300 group"
+              className="flex items-center gap-2.5 opacity-35 hover:opacity-90 transition-opacity duration-300 group"
             >
-              {org.logo ? (
+              {org.wordmark ? (
                 <img
-                  src={org.logo}
+                  src={org.logo!}
                   alt={org.name}
-                  className="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className="h-6 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               ) : (
-                <span className="w-5 h-5 rounded flex items-center justify-center text-[8px] font-bold" style={{ background: "var(--bg-card-alt)", color: "var(--text-muted)" }}>
-                  {org.name.slice(0, 2).toUpperCase()}
-                </span>
+                <>
+                  <img
+                    src={org.logo!}
+                    alt={org.name}
+                    className="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                  <span className="text-sm font-medium transition-colors duration-300 whitespace-nowrap" style={{ color: "var(--text-muted)" }}>
+                    {org.name}
+                  </span>
+                </>
               )}
-              <span className="text-sm font-medium transition-colors duration-300 whitespace-nowrap" style={{ color: "var(--text-muted)" }}>
-                {org.name}
-              </span>
             </a>
           ))}
         </div>
