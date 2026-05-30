@@ -8,6 +8,19 @@ I build websites, SaaS products, and digital experiences that convert — from l
 
 ---
 
+### Contributed to
+
+[![Shopify](https://img.shields.io/badge/Shopify-96BF48?style=flat&logo=shopify&logoColor=white)](https://github.com/Shopify/identity_cache)
+[![Google](https://img.shields.io/badge/Google-4285F4?style=flat&logo=google&logoColor=white)](https://github.com/google/libphonenumber)
+[![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat&logo=cloudflare&logoColor=white)](https://github.com/cloudflare)
+[![Basecamp](https://img.shields.io/badge/Basecamp-1D2D35?style=flat&logo=basecamp&logoColor=white)](https://github.com/basecamp)
+[![X / Twitter](https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white)](https://github.com/twitter)
+[![TheAlgorithms](https://img.shields.io/badge/TheAlgorithms-00897B?style=flat&logo=github&logoColor=white)](https://github.com/TheAlgorithms/Ruby)
+[![Cegid](https://img.shields.io/badge/Cegid-0053A0?style=flat&logoColor=white)](https://www.cegid.com)
+[![DabaDoc](https://img.shields.io/badge/DabaDoc-00AEEF?style=flat&logoColor=white)](https://www.dabadoc.com)
+
+---
+
 **Stack:** Ruby on Rails · Next.js · TypeScript · PostgreSQL · AWS · Docker · AI Integration
 
-📫 Reach me on [LinkedIn](https://linkedin.com/in/merouane-amqor)
+📫 [LinkedIn](https://linkedin.com/in/merouane-amqor) · [GitHub](https://github.com/merouaneamqor)
