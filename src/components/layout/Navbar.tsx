@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
+import { availabilityStatus } from "@/data/contact";
 
 const navLinks = [
   { label: "About",        href: "#about" },
@@ -308,7 +309,7 @@ export default function Navbar() {
             }}
           >
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 status-pulse inline-block" />
-            <span className="text-emerald-600 dark:text-emerald-400">Available for new projects</span>
+            <span className="text-emerald-600 dark:text-emerald-400">{availabilityStatus.label}</span>
           </div>
           <a
             href="#contact"

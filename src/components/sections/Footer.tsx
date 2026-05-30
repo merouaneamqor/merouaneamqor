@@ -1,4 +1,5 @@
 import { navLinks, socialLinks } from "@/data/navigation";
+import { availabilityStatus } from "@/data/contact";
 
 const SocialIcon = ({ id }: { id: string }) => {
   if (id === "linkedin") return (
@@ -76,7 +77,7 @@ export default function Footer() {
           <span>© {new Date().getFullYear()} Merouane Amqor. All rights reserved.</span>
           <div className="flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 status-pulse" />
-            <span>Available for new projects</span>
+            <span>{availabilityStatus.label}</span>
           </div>
         </div>
       </div>

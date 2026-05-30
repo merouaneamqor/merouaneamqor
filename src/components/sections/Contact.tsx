@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { channels, availability } from "@/data/contact";
+import { channels, availability, availabilityStatus } from "@/data/contact";
 
 const ChannelIcon = ({ id }: { id: string }) => {
   if (id === "linkedin") return (
@@ -70,7 +70,7 @@ export default function Contact() {
           <div className="lg:col-span-2 flex flex-col gap-5">
             <div>
               <h3 className="font-semibold mb-1" style={{ color: "var(--text)" }}>Let&apos;s build something together</h3>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>Currently accepting new clients for Q3 2026. Response within 24 hours.</p>
+              <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>Currently accepting new clients for {availabilityStatus.period}. Response within 24 hours.</p>
             </div>
 
             <div className="flex flex-col gap-2">

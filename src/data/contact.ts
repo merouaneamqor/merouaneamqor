@@ -1,3 +1,9 @@
+export const availabilityStatus = {
+  available: true,
+  label: "Available for new projects",
+  period: "Q3 2026",
+};
+
 export const channels = [
   {
     label: "Email",

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { stats, badges, heroServices } from "@/data/hero";
+import { availabilityStatus } from "@/data/contact";
 
 function CountUp({ target, suffix }: { target: number; suffix: string }) {
   const [count, setCount] = useState(0);
@@ -143,7 +144,7 @@ export default function Hero() {
               style={{ animationDelay: "0ms" }}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 status-pulse shrink-0" />
-              Available for new projects — Q3 2026
+              {availabilityStatus.label} — {availabilityStatus.period}
             </div>
 
             {/* Headline */}
