@@ -206,7 +206,7 @@ export default function Hero() {
                 </svg>
                 <span className="relative">Book a Free Call</span>
               </a>
-              <a href="#case-studies" className="inline-flex items-center gap-2 px-6 py-3 border border-[var(--border)] hover:border-[var(--coral)] text-slate-500 dark:text-slate-300 hover:text-[var(--coral)] text-sm font-medium rounded-xl transition-all hover:bg-[var(--coral-dim)]">
+              <a href="#case-studies" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--border-strong)] hover:border-[var(--coral)] text-[var(--text-muted)] hover:text-[var(--coral)] text-sm font-semibold rounded-xl transition-all hover:bg-[var(--coral-dim)]">
                 See My Work
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -245,14 +245,6 @@ export default function Hero() {
             <div className="card-surface relative rounded-2xl p-5 animate-glow-card overflow-hidden">
               <Corners />
 
-              {/* Scan beam — coral */}
-              <div
-                className="absolute left-0 right-0 h-[2px] pointer-events-none z-10"
-                style={{
-                  background: "linear-gradient(90deg, transparent, rgba(204,87,51,0.5), rgba(232,119,74,0.8), rgba(204,87,51,0.5), transparent)",
-                  animation: "scan-beam 4s ease-in-out infinite",
-                }}
-              />
 
               <div className="flex items-start gap-4 mb-4">
                 <div className="relative shrink-0 w-14 h-14">
@@ -280,10 +272,14 @@ export default function Hero() {
               </div>
 
               <div className="grid grid-cols-3 gap-3 text-center">
-                {["8+ Years", "80+ Projects", "5★ Rated"].map(t => (
-                  <div key={t} className="rounded-lg py-2.5 transition-all duration-300" style={{ background: "var(--bg-card-alt)", border: "1px solid var(--border)" }}>
-                    <p className="font-bold text-base" style={{ color: "var(--coral)" }}>{t.split(" ")[0]}</p>
-                    <p className="text-xs" style={{ color: "var(--text-muted)" }}>{t.split(" ").slice(1).join(" ")}</p>
+                {[
+                  { v: "Rails", l: "Primary Stack" },
+                  { v: "GMT+1", l: "Timezone" },
+                  { v: "5★", l: "Avg Rating" },
+                ].map(t => (
+                  <div key={t.l} className="rounded-lg py-2.5 transition-all duration-300" style={{ background: "var(--bg-card-alt)", border: "1px solid var(--border)" }}>
+                    <p className="font-bold text-base" style={{ color: "var(--coral)" }}>{t.v}</p>
+                    <p className="text-xs" style={{ color: "var(--text-muted)" }}>{t.l}</p>
                   </div>
                 ))}
               </div>
@@ -310,11 +306,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40 animate-fade-in" style={{ animationDelay: "1.2s" }}>
-        <span className="text-xs uppercase tracking-[0.2em] text-slate-500">Scroll</span>
-        <div className="w-px h-8 bg-gradient-to-b from-slate-500 to-transparent" />
-      </div>
     </section>
   );
 }

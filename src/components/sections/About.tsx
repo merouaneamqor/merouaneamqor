@@ -45,7 +45,7 @@ export default function About() {
                 The Developer Who{" "}
                 <span className="text-gradient-coral">Builds & Ships</span>
               </h2>
-              <div className="flex flex-col gap-3 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+              <div className="flex flex-col gap-3 text-[15px] leading-relaxed" style={{ color: "var(--text-muted)" }}>
                 <p>
                   I&apos;m Merouane — a{" "}
                   <span style={{ color: "var(--text)" }}>Full-Stack Developer & Team Leader R&D</span> based in{" "}

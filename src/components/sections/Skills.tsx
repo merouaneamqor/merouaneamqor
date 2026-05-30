@@ -47,9 +47,8 @@ export default function Skills() {
               <div className="flex flex-col gap-3.5">
                 {g.skills.map(s => (
                   <div key={s.n}>
-                    <div className="flex justify-between mb-1.5">
+                    <div className="mb-1.5">
                       <span className="text-sm" style={{ color: "var(--text)" }}>{s.n}</span>
-                      <span className="text-xs" style={{ color: "var(--text-muted)" }}>{s.v}%</span>
                     </div>
                     <div className="h-1 rounded-full overflow-hidden" style={{ background: "var(--border)" }}>
                       <div className={`h-full rounded-full ${bars[g.color]}`} style={{ width: `${s.v}%` }} />
