@@ -18,6 +18,7 @@ I build websites, SaaS products, and digital experiences that convert — from l
 [![TheAlgorithms](https://img.shields.io/badge/TheAlgorithms-00897B?style=flat&logo=github&logoColor=white)](https://github.com/TheAlgorithms/Ruby)
 [![Cegid](https://img.shields.io/badge/Cegid-0053A0?style=flat&logoColor=white)](https://www.cegid.com)
 [![DabaDoc](https://img.shields.io/badge/DabaDoc-00AEEF?style=flat&logoColor=white)](https://www.dabadoc.com)
+[![Deno](https://img.shields.io/badge/Deno-000000?style=flat&logo=deno&logoColor=white)](https://github.com/denoland/deno)
 
 ---
 
