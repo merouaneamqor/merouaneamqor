@@ -1,105 +1,86 @@
 "use client";
 
-import { useRef, useState } from "react";
 import { orgs } from "@/data/contributions";
 
-function OrgItem({ org }: { org: typeof orgs[number] }) {
-  return (
-    <a
-      href={org.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity duration-300 group shrink-0 px-8"
-    >
-      <img
-        src={org.logo!}
-        alt={org.name}
-        className="h-5 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-      />
-      {!org.wordmark && (
-        <span className="text-sm font-medium whitespace-nowrap select-none" style={{ color: "var(--text-muted)" }}>
-          {org.name}
-        </span>
-      )}
-    </a>
-  );
-}
+const featured = orgs.filter(o => o.wordmark);
+const community = orgs.filter(o => !o.wordmark);
 
 export default function Contributions() {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const [dragging, setDragging] = useState(false);
-  const [paused, setPaused] = useState(false);
-  const startX = useRef(0);
-  const scrollLeft = useRef(0);
-
-  const onMouseDown = (e: React.MouseEvent) => {
-    const el = trackRef.current;
-    if (!el) return;
-    setDragging(true);
-    setPaused(true);
-    startX.current = e.pageX - el.offsetLeft;
-    scrollLeft.current = el.scrollLeft;
-    el.style.cursor = "grabbing";
-  };
-
-  const onMouseMove = (e: React.MouseEvent) => {
-    if (!dragging) return;
-    const el = trackRef.current;
-    if (!el) return;
-    e.preventDefault();
-    const x = e.pageX - el.offsetLeft;
-    el.scrollLeft = scrollLeft.current - (x - startX.current);
-  };
-
-  const onMouseUp = () => {
-    setDragging(false);
-    const el = trackRef.current;
-    if (el) el.style.cursor = "grab";
-  };
-
-  const onMouseEnter = () => setPaused(true);
-  const onMouseLeave = () => { setDragging(false); setPaused(false); };
-
   return (
-    <section className="relative py-8 border-y border-[var(--border)] overflow-hidden">
-      {/* Fade masks */}
-      <div className="absolute inset-y-0 left-0 w-24 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, var(--bg), transparent)" }} />
-      <div className="absolute inset-y-0 right-0 w-24 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, var(--bg), transparent)" }} />
+    <section className="py-16 relative">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--border-strong)] to-transparent" />
 
-      <p className="text-center text-xs uppercase tracking-[0.2em] text-[var(--text-muted)] mb-6 font-medium">
-        Contributed to &amp; worked with
-      </p>
+      <div className="site-container">
+        <div className="text-center mb-12 max-w-xl mx-auto">
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border mb-4" style={{ background: "var(--coral-dim)", color: "var(--coral)", borderColor: "rgba(204,87,51,0.2)" }}>
+            Experience & Contributions
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3" style={{ color: "var(--text)" }}>
+            Companies &{" "}
+            <span className="text-gradient-coral">Projects I've Shaped</span>
+          </h2>
+          <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+            From enterprise SaaS leadership to open-source contributions across the Rails & JS ecosystem.
+          </p>
+        </div>
 
-      <div
-        ref={trackRef}
-        className="flex overflow-x-auto scrollbar-hide"
-        style={{
-          cursor: "grab",
-          animation: paused ? "none" : "marquee 28s linear infinite",
-          userSelect: "none",
-        }}
-        onMouseDown={onMouseDown}
-        onMouseMove={onMouseMove}
-        onMouseUp={onMouseUp}
-        onMouseLeave={onMouseLeave}
-        onMouseEnter={onMouseEnter}
-      >
-        {[...orgs, ...orgs, ...orgs].map((org, i) => (
-          <OrgItem key={`${org.name}-${i}`} org={org} />
-        ))}
+        {/* Featured — employer cards */}
+        <div className="grid sm:grid-cols-2 gap-5 mb-5">
+          {featured.map(org => (
+            <a
+              key={org.name}
+              href={org.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group card-surface rounded-2xl p-8 flex flex-col gap-5 transition-all duration-300 hover:scale-[1.02]"
+              style={{ borderColor: "var(--border)" }}
+            >
+              <div className="flex items-center justify-between">
+                <img
+                  src={org.logo}
+                  alt={org.name}
+                  className="h-8 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+                <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-1 group-hover:translate-x-0" style={{ color: "var(--coral)" }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: "var(--coral)" }}>{org.tag}</p>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                  {org.name === "Cegid"
+                    ? "Leading R&D engineering teams at one of Europe's top enterprise SaaS companies — 700,000+ businesses across finance, HR & retail."
+                    : "Senior Full-Stack Engineer building scalable healthcare platforms connecting patients with doctors across Africa & MENA."}
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        {/* Open source grid */}
+        <div className="card-surface rounded-2xl p-6">
+          <p className="text-xs font-semibold uppercase tracking-wider mb-5" style={{ color: "var(--text-muted)" }}>Open Source Contributions</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-4">
+            {community.map(org => (
+              <a
+                key={org.name}
+                href={org.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center gap-3 p-4 rounded-xl border transition-all duration-300 hover:border-[var(--coral)] hover:bg-[var(--coral-dim)]"
+                style={{ borderColor: "var(--border)", background: "var(--bg-card-alt)" }}
+              >
+                <img
+                  src={org.logo}
+                  alt={org.name}
+                  className="w-8 h-8 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+                <span className="text-xs font-medium text-center leading-tight" style={{ color: "var(--text-muted)" }}>{org.name}</span>
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
-
-      <style>{`
-        @keyframes marquee {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-33.333%); }
-        }
-        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-        .scrollbar-hide::-webkit-scrollbar { display: none; }
-        @media (prefers-reduced-motion: reduce) {
-          @keyframes marquee { 0%, 100% { transform: translateX(0); } }
-        }
-      `}</style>
     </section>
   );
 }
