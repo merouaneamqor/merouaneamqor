@@ -76,29 +76,35 @@ function BgOrbs() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
       <div
-        className="absolute rounded-full blur-[140px] opacity-[0.18] dark:opacity-25"
+        className="absolute rounded-full opacity-[0.18] dark:opacity-25 animate-orb"
         style={{
           width: 600, height: 600,
           top: "-15%", left: "30%",
           background: "radial-gradient(circle, #CC5733 0%, #E8774A 60%, transparent 100%)",
+          filter: "blur(80px)",
+          willChange: "transform",
           animation: "orb-drift-1 18s ease-in-out infinite",
         }}
       />
       <div
-        className="absolute rounded-full blur-[100px] opacity-[0.12] dark:opacity-20"
+        className="absolute rounded-full opacity-[0.12] dark:opacity-20 animate-orb"
         style={{
           width: 400, height: 400,
           top: "20%", right: "-5%",
           background: "radial-gradient(circle, #E8774A 0%, #CC5733 70%, transparent 100%)",
+          filter: "blur(60px)",
+          willChange: "transform",
           animation: "orb-drift-2 22s ease-in-out infinite",
         }}
       />
       <div
-        className="absolute rounded-full blur-[160px] opacity-[0.08] dark:opacity-12"
+        className="absolute rounded-full opacity-[0.08] dark:opacity-12 animate-orb"
         style={{
           width: 500, height: 500,
           bottom: "-10%", left: "-5%",
           background: "radial-gradient(circle, #CC5733 0%, transparent 70%)",
+          filter: "blur(80px)",
+          willChange: "transform",
           animation: "orb-drift-1 26s ease-in-out infinite reverse",
         }}
       />
