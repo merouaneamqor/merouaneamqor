@@ -19,8 +19,8 @@ export const availabilityStatus = {
 export const channels = [
   {
     label: "Email",
-    value: "merouane@amqor.dev",
-    href: "mailto:merouane@amqor.dev",
+    value: "marouaneamqor@gmail.com",
+    href: "mailto:marouaneamqor@gmail.com",
     desc: "For scoped project briefs & RFPs",
     icon: "email" as const,
   },
