@@ -1,10 +1,10 @@
 # Hey, I'm Merouane 👋
 
-**Full-Stack Developer · Team Leader R&D @ Cegid · Casablanca, Morocco**
+**Research & Development Expert · Team Leader R&D @ Cegid · Casablanca, Morocco**
 
 I build websites, SaaS products, and digital experiences that convert — from landing pages to complex platforms.
 
-🌐 **Portfolio:** [merouaneamqor.github.io/merouaneamqor](https://merouaneamqor.github.io/merouaneamqor/)
+🌐 **Portfolio:** [merouaneamqor.github.io](https://merouaneamqor.github.io/)
 
 ---
 
