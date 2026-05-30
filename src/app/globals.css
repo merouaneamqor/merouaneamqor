@@ -225,7 +225,7 @@ html:not(.dark) .border-white\/20        { border-color: rgba(25,25,25,0.15); }
 .animate-pulse-slow  { animation: pulse-slow    4s ease-in-out infinite; }
 .animate-fade-up     { animation: fade-up       0.6s cubic-bezier(0.16,1,0.3,1) both; }
 .animate-fade-in     { animation: fade-in       0.5s ease both; }
-.animate-glow-card   { animation: glow-border-coral 3s ease-in-out infinite; box-shadow: 0 0 0 1px rgba(204,87,51,0.3), 0 0 30px rgba(204,87,51,0.1); }
+.animate-glow-card   { box-shadow: 0 0 0 1px rgba(204,87,51,0.2), 0 0 24px rgba(204,87,51,0.08); }
 .animate-neon-cta    { animation: neon-coral    2.5s ease-in-out infinite; box-shadow: 0 4px 20px rgba(204,87,51,0.4); }
 .animate-shimmer {
   background: linear-gradient(90deg, transparent 0%, rgba(204,87,51,0.08) 50%, transparent 100%);
