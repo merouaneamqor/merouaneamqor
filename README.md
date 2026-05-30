@@ -1,32 +1,13 @@
-# Merouane Amqor — Personal Portfolio
+# Hey, I'm Merouane 👋
 
-> **Live site:** [merouaneamqor.github.io/merouaneamqor](https://merouaneamqor.github.io/merouaneamqor/)
+**Full-Stack Developer · Team Leader R&D @ Cegid · Casablanca, Morocco**
 
-Personal portfolio of Merouane Amqor — Full-Stack Developer & Team Leader R&D at Cegid. Built with Next.js 15, Tailwind CSS v4, and futuristic UI animations.
+I build websites, SaaS products, and digital experiences that convert — from landing pages to complex platforms.
 
-## Stack
+🌐 **Portfolio:** [merouaneamqor.github.io/merouaneamqor](https://merouaneamqor.github.io/merouaneamqor/)
 
-- **Framework** — Next.js 15 (App Router, static export)
-- **Styling** — Tailwind CSS v4
-- **Language** — TypeScript
-- **Hosting** — GitHub Pages (auto-deployed via GitHub Actions on every push to `master`)
+---
 
-## Sections
+**Stack:** Ruby on Rails · Next.js · TypeScript · PostgreSQL · AWS · Docker · AI Integration
 
-- Hero with typewriter effect, animated orbs, and scan-beam
-- About, Services, Skills, Experience
-- Case Studies & Testimonials
-- Contact & Footer
-
-## Local development
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-## Deploy
-
-Pushing to `master` triggers the GitHub Actions workflow which builds a static export and deploys to GitHub Pages automatically.
+📫 Reach me on [LinkedIn](https://linkedin.com/in/merouane-amqor)
