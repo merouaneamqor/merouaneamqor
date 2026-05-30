@@ -27,6 +27,6 @@ jobs:
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           external_repository: merouaneamqor/merouaneamqor.github.io
-          publish_branch: main
+          publish_branch: master
           publish_dir: ./out
           cname: ""
