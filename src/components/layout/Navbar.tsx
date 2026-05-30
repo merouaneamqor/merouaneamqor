@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { availabilityStatus } from "@/data/contact";
 
@@ -127,15 +128,12 @@ export default function Navbar() {
 
           {/* Logo */}
           <a href="#" className="flex items-center gap-2.5 group shrink-0" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-            <div
-              className="w-8 h-8 rounded-lg flex items-center justify-center text-white font-bold text-sm transition-all duration-200 group-hover:scale-105"
-              style={{ background: "var(--coral)" }}
-            >
-              MA
+            <div className="w-8 h-8 rounded-lg overflow-hidden shrink-0 transition-all duration-200 group-hover:scale-105" style={{ boxShadow: "0 2px 8px rgba(204,87,51,0.3)" }}>
+              <Image src="/avatar.jpg" alt="Merouane Amqor" width={32} height={32} className="object-cover object-top w-full h-full" />
             </div>
             <div className="hidden sm:block">
               <p className="text-sm font-semibold leading-tight" style={{ color: "var(--text)" }}>Merouane Amqor</p>
-              <p className="text-[10px] leading-tight" style={{ color: "var(--text-muted)" }}>Team Leader R&D</p>
+              <p className="text-[10px] leading-tight" style={{ color: "var(--text-muted)" }}>Research & Development Expert</p>
             </div>
           </a>
 

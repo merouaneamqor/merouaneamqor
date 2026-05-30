@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { stats, badges, heroServices } from "@/data/hero";
 import { availabilityStatus } from "@/data/contact";
 
@@ -251,14 +252,14 @@ export default function Hero() {
                 <div className="relative shrink-0 w-14 h-14">
                   <div className="absolute inset-[-8px] rounded-full border border-dashed animate-orbit" style={{ borderColor: "rgba(204,87,51,0.25)", animationDuration: "10s" }} />
                   <div className="absolute inset-[-3px] rounded-full border animate-orbit-rev" style={{ borderColor: "rgba(204,87,51,0.15)", animationDuration: "7s" }} />
-                  <div className="w-14 h-14 rounded-xl flex items-center justify-center text-white font-bold text-lg relative z-10" style={{ background: "linear-gradient(135deg, var(--coral) 0%, var(--coral-light) 100%)", boxShadow: "0 4px 16px rgba(204,87,51,0.3)" }}>
-                    MA
+                  <div className="w-14 h-14 rounded-xl overflow-hidden relative z-10" style={{ boxShadow: "0 4px 16px rgba(204,87,51,0.3)" }}>
+                    <Image src="/avatar.jpg" alt="Merouane Amqor" fill className="object-cover object-top" />
                   </div>
                   <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-emerald-400 border-2 border-[var(--bg-card)] status-pulse z-20" />
                 </div>
                 <div>
                   <p className="font-semibold text-[var(--text)]">Merouane Amqor</p>
-                  <p className="text-sm font-medium" style={{ color: "var(--coral)" }}>Full-Stack Dev · Team Leader R&D</p>
+                  <p className="text-sm font-medium" style={{ color: "var(--coral)" }}>Research & Development Expert</p>
                   <p className="text-[var(--text-muted)] text-xs mt-0.5">@ Cegid · Casablanca, Morocco</p>
                 </div>
               </div>

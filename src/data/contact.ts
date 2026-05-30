@@ -1,7 +1,19 @@
+function availabilityPeriod(): string {
+  const now = new Date();
+  const q = Math.ceil((now.getMonth() + 1) / 3);
+  const year = now.getFullYear();
+  const nextQ = q === 4 ? 1 : q + 1;
+  const nextYear = q === 4 ? year + 1 : year;
+  const suffix = year === nextYear ? ` ${year}` : "";
+  return nextYear !== year
+    ? `Q${q} ${year} & Q${nextQ} ${nextYear}`
+    : `Q${q} & Q${nextQ} ${year}`;
+}
+
 export const availabilityStatus = {
   available: true,
   label: "Available for new projects",
-  period: "Q3 2026",
+  period: availabilityPeriod(),
 };
 
 export const channels = [
