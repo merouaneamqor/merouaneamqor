@@ -10,24 +10,11 @@ function OrgItem({ org }: { org: typeof orgs[number] }) {
       rel="noopener noreferrer"
       className="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity duration-300 group shrink-0 px-8"
     >
-      {org.wordmark ? (
-        <img
-          src={org.logo!}
-          alt={org.name}
-          className="h-5 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-        />
-      ) : (
-        <>
-          <img
-            src={org.logo!}
-            alt={org.name}
-            className="h-5 w-5 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-          />
-          <span className="text-base font-medium whitespace-nowrap" style={{ color: "var(--text-muted)" }}>
-            {org.name}
-          </span>
-        </>
-      )}
+      <img
+        src={org.logo!}
+        alt={org.name}
+        className="h-5 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+      />
     </a>
   );
 }
