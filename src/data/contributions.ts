@@ -6,6 +6,6 @@ export const orgs = [
   { name: "X / Twitter",   logo: "https://cdn.simpleicons.org/x/6B7280",            url: "https://github.com/twitter/the-algorithm",    wordmark: false },
   { name: "TheAlgorithms", logo: "https://cdn.simpleicons.org/github/6B7280",       url: "https://github.com/TheAlgorithms/Ruby",       wordmark: false },
   { name: "Deno",          logo: "https://cdn.simpleicons.org/deno/6B7280",         url: "https://github.com/denoland/deno",            wordmark: false },
-  { name: "Cegid",         logo: "/logo-cegid.svg",                                 url: "https://www.cegid.com",                       wordmark: true  },
-  { name: "DabaDoc",       logo: "/logo-dabadoc.svg",                               url: "https://www.dabadoc.com",                     wordmark: true  },
+  { name: "Cegid",         logo: "/logo-cegid.png",                                 url: "https://www.cegid.com",                       wordmark: true  },
+  { name: "DabaDoc",       logo: "/logo-dabadoc.png",                               url: "https://www.dabadoc.com",                     wordmark: true  },
 ];
