@@ -26,8 +26,8 @@ export const testimonials = [
 ];
 
 export const testimonialStats = [
-  { v: "50+",  l: "Projects Delivered" },
-  { v: "8+",   l: "Years Experience" },
-  { v: "4.9★", l: "Average Rating" },
-  { v: "12+",  l: "Countries Served" },
+  { v: "50+",  l: "Production Systems Shipped" },
+  { v: "8+",   l: "Years in Production Engineering" },
+  { v: "4.9★", l: "Client Satisfaction Score" },
+  { v: "12+",  l: "Countries & Markets Served" },
 ];

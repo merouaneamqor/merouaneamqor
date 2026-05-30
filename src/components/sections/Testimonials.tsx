@@ -27,11 +27,11 @@ export default function Testimonials() {
             Testimonials
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3" style={{ color: "var(--text)" }}>
-            Trusted by{" "}
-            <span className="text-gradient-coral">Founders & CTOs</span>
+            What CTOs & Founders{" "}
+            <span className="text-gradient-coral">Say After Shipping Together</span>
           </h2>
           <p className="text-base" style={{ color: "var(--text-muted)" }}>
-            What engineering leaders, founders, and product teams say about working with me.
+            Engineering leaders, founders, and VPs who brought me in for the hard problems — and what happened after.
           </p>
         </div>
 

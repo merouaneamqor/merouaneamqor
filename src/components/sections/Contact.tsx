@@ -57,11 +57,11 @@ export default function Contact() {
             Let&apos;s Work Together
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3" style={{ color: "var(--text)" }}>
-            Ready to Ship{" "}
-            <span className="text-gradient-coral">Something Great?</span>
+            Let&apos;s Solve a{" "}
+            <span className="text-gradient-coral">Real Engineering Problem</span>
           </h2>
           <p className="text-base" style={{ color: "var(--text-muted)" }}>
-            Whether you need a senior Rails developer, a technical leader, or an AI integration expert — let&apos;s talk.
+            Whether you need a senior Rails architect, a fractional CTO, or an LLM integration that actually ships — start with a 30-minute brief.
           </p>
         </div>
 
@@ -69,8 +69,8 @@ export default function Contact() {
           {/* Left */}
           <div className="lg:col-span-2 flex flex-col gap-5">
             <div>
-              <h3 className="font-semibold mb-1" style={{ color: "var(--text)" }}>Let&apos;s build something together</h3>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>Currently accepting new clients for {availabilityStatus.period}. Response within 24 hours.</p>
+              <h3 className="font-semibold mb-1" style={{ color: "var(--text)" }}>Start with a technical brief</h3>
+              <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>Open to new engagements for {availabilityStatus.period}. Scoped reply within 24 hours.</p>
             </div>
 
             <div className="flex flex-col gap-2">
@@ -156,7 +156,7 @@ export default function Contact() {
                     <><span>Send Message</span><svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg></>
                   )}
                 </button>
-                <p className="text-center text-xs" style={{ color: "var(--text-muted)" }}>No spam. Just a genuine conversation about your project.</p>
+                <p className="text-center text-xs" style={{ color: "var(--text-muted)" }}>No sales deck. Just a direct technical conversation about your problem.</p>
               </form>
             )}
           </div>

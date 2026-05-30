@@ -1,17 +1,17 @@
 export const heroServices = [
-  { icon: "globe",     label: "Websites" },
-  { icon: "arrow-up", label: "Landing Pages" },
-  { icon: "cube",     label: "SaaS Products" },
-  { icon: "chip",     label: "AI Integration" },
-  { icon: "users",    label: "Tech Leadership" },
-  { icon: "link",     label: "API & Integrations" },
+  { icon: "globe",     label: "Web Platforms" },
+  { icon: "arrow-up", label: "Growth Pages" },
+  { icon: "cube",     label: "SaaS Architecture" },
+  { icon: "chip",     label: "LLM & AI Systems" },
+  { icon: "users",    label: "Engineering Leadership" },
+  { icon: "link",     label: "API Orchestration" },
 ];
 
 export const stats = [
-  { value: 8,   suffix: "+", label: "Years Exp." },
-  { value: 80,  suffix: "+", label: "Projects Done" },
-  { value: 40,  suffix: "+", label: "Happy Clients" },
-  { value: 100, suffix: "%", label: "Satisfaction" },
+  { value: 8,   suffix: "+", label: "Years Shipped" },
+  { value: 80,  suffix: "+", label: "Products Delivered" },
+  { value: 40,  suffix: "+", label: "Clients & Teams" },
+  { value: 100, suffix: "%", label: "On-Time Rate" },
 ];
 
 export const badges = [

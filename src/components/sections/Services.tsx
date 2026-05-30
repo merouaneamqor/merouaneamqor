@@ -42,11 +42,11 @@ export default function Services() {
             Services
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3" style={{ color: "var(--text)" }}>
-            Everything You Need to{" "}
-            <span className="text-gradient-coral">Build & Grow Online</span>
+            Senior-Level Execution{" "}
+            <span className="text-gradient-coral">Across the Full Stack</span>
           </h2>
           <p className="text-base" style={{ color: "var(--text-muted)" }}>
-            From a single landing page to a full SaaS platform — I deliver end-to-end across design, development, integrations, and leadership.
+            From growth page to multi-tenant SaaS — I own the full critical path: architecture, implementation, infrastructure, and delivery.
           </p>
         </div>
 
@@ -94,9 +94,9 @@ export default function Services() {
         </div>
 
         <div className="mt-8 text-center">
-          <p className="text-sm mb-4" style={{ color: "var(--text-muted)" }}>Not sure what you need? Let&apos;s figure it out together — free 30-min call.</p>
+          <p className="text-sm mb-4" style={{ color: "var(--text-muted)" }}>Not sure what scope fits your problem? 30 minutes with me will map it out — no commitment.</p>
           <a href="#contact" className="inline-flex items-center gap-2 px-6 py-2.5 text-white font-semibold rounded-xl transition-colors text-sm btn-coral">
-            Book a Free Discovery Call →
+            Book a Technical Discovery Call →
           </a>
         </div>
       </div>

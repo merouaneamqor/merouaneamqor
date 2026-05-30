@@ -20,11 +20,11 @@ export default function CaseStudies() {
             Case Studies
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3" style={{ color: "var(--text)" }}>
-            Real Problems,{" "}
-            <span className="text-gradient-coral">Measurable Results</span>
+            Hard Technical Problems,{" "}
+            <span className="text-gradient-coral">Quantified Business Impact</span>
           </h2>
           <p className="text-base" style={{ color: "var(--text-muted)" }}>
-            Three in-depth case studies showing how I approach complex challenges and deliver quantifiable business impact.
+            Three deep-dives into real production problems — architecture decisions, engineering trade-offs, and the metrics that followed.
           </p>
         </div>
 
@@ -81,9 +81,9 @@ export default function CaseStudies() {
         </div>
 
         <div className="mt-10 text-center">
-          <p className="text-sm mb-4" style={{ color: "var(--text-muted)" }}>Want similar results for your project?</p>
+          <p className="text-sm mb-4" style={{ color: "var(--text-muted)" }}>Facing a similar architectural or delivery challenge? Let&apos;s get into the specifics.</p>
           <a href="#contact" className="inline-flex items-center gap-2 px-6 py-2.5 text-white font-semibold rounded-xl transition-colors text-sm btn-coral">
-            Let&apos;s Discuss Your Challenge →
+            Discuss Your Technical Problem →
           </a>
         </div>
       </div>

@@ -32,11 +32,11 @@ export default function Skills() {
             Skills & Tech Stack
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3" style={{ color: "var(--text)" }}>
-            Full-Stack Expertise,{" "}
-            <span className="text-gradient-coral">Front to Back</span>
+            Production-Grade Depth,{" "}
+            <span className="text-gradient-coral">Every Layer of the Stack</span>
           </h2>
           <p className="text-base" style={{ color: "var(--text-muted)" }}>
-            From pixel-perfect frontends to high-performance backends, cloud infrastructure, AI integrations, and engineering leadership.
+            8+ years of production reps across UI, APIs, databases, cloud infra, LLM pipelines, and engineering leadership — not tutorial experience.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export default function Skills() {
         </div>
 
         <div className="card-surface rounded-2xl p-5">
-          <p className="text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: "var(--text-muted)" }}>Full Ecosystem — 40+ Tools & Libraries</p>
+          <p className="text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: "var(--text-muted)" }}>Full Ecosystem — 40+ Battle-Tested Tools</p>
           <div className="flex flex-wrap gap-2">
             {tools.map(t => (
               <span key={t} className="px-2.5 py-1 text-xs rounded-lg border transition-all cursor-default hover:border-[var(--border-strong)]" style={{ color: "var(--text-muted)", background: "var(--bg-card-alt)", borderColor: "var(--border)" }}>

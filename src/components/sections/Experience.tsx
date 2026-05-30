@@ -14,17 +14,17 @@ export default function Experience() {
             Experience
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3" style={{ color: "var(--text)" }}>
-            From Developer to{" "}
-            <span className="text-gradient-coral">R&D Team Leader</span>
+            IC to Engineering Lead —{" "}
+            <span className="text-gradient-coral">8 Years of Compounding Depth</span>
           </h2>
           <p className="text-base" style={{ color: "var(--text-muted)" }}>
-            From Full-Stack Developer to Senior Engineer to R&D Team Leader at Cegid — a career built on shipping quality software and growing great teams.
+            From full-stack IC to senior engineer to R&D Team Leader at a 700k-customer enterprise SaaS — a career trajectory built on shipping and scaling, not just seniority.
           </p>
         </div>
 
         {/* Career progression indicator */}
         <div className="mb-10 card-surface rounded-2xl p-5">
-          <p className="text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: "var(--text-muted)" }}>Career Progression</p>
+          <p className="text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: "var(--text-muted)" }}>Engineering Trajectory</p>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
             {[
               { label: "Full-Stack Developer",      bg: "var(--bg-card-alt)", color: "var(--text-muted)" },
@@ -104,9 +104,9 @@ export default function Experience() {
         {/* Note about exact dates */}
         <div className="mt-8 p-4 rounded-xl border text-center" style={{ borderColor: "var(--border)", background: "var(--bg-card-alt)" }}>
           <p className="text-xs" style={{ color: "var(--text-muted)" }}>
-            Exact dates and company names available upon request during a discovery call.{" "}
+            Full timeline, employer names, and references available on request.{" "}
             <a href="https://linkedin.com/in/merouane-amqor" target="_blank" rel="noopener noreferrer" className="transition-colors hover:underline" style={{ color: "var(--coral)" }}>
-              View LinkedIn profile →
+              Verify on LinkedIn →
             </a>
           </p>
         </div>

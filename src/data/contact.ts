@@ -21,28 +21,28 @@ export const channels = [
     label: "Email",
     value: "merouane@amqor.dev",
     href: "mailto:merouane@amqor.dev",
-    desc: "Best for project inquiries",
+    desc: "For scoped project briefs & RFPs",
     icon: "email" as const,
   },
   {
     label: "LinkedIn",
     value: "linkedin.com/in/merouaneamqor",
     href: "https://linkedin.com/in/merouaneamqor",
-    desc: "Connect professionally",
+    desc: "Professional background & endorsements",
     icon: "linkedin" as const,
   },
   {
     label: "GitHub",
     value: "github.com/merouaneamqor",
     href: "https://github.com/merouaneamqor",
-    desc: "See my open-source work",
+    desc: "Production code & open-source contributions",
     icon: "github" as const,
   },
 ];
 
 export const availability = [
-  ["Availability",          "Part-time & Full-time"],
-  ["Time Zone",             "GMT+1 (Morocco)"],
-  ["Response Time",         "Within 24 hours"],
-  ["Preferred Engagement",  "3–6+ months"],
+  ["Engagement Model",      "Project · Retainer · Fractional"],
+  ["Time Zone",             "GMT+1 — overlap-friendly"],
+  ["Response SLA",          "< 24 hours"],
+  ["Preferred Duration",    "3–6+ months"],
 ] as const;

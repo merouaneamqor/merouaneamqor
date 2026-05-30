@@ -39,38 +39,36 @@ export default function About() {
           <div className="flex flex-col gap-6">
             <div>
               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border mb-4" style={{ background: "var(--coral-dim)", color: "var(--coral)", borderColor: "rgba(204,87,51,0.2)" }}>
-                About Me
+                Engineering Profile
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4" style={{ color: "var(--text)" }}>
-                The Developer Who{" "}
-                <span className="text-gradient-coral">Builds & Ships</span>
+                Senior Engineer Who{" "}
+                <span className="text-gradient-coral">Owns the Outcome</span>
               </h2>
               <div className="flex flex-col gap-3 text-[15px] leading-relaxed" style={{ color: "var(--text-muted)" }}>
                 <p>
                   I&apos;m Merouane — a{" "}
-                  <span style={{ color: "var(--text)" }}>Full-Stack Developer & Team Leader R&D</span> based in{" "}
-                  <span style={{ color: "var(--text)" }}>Casablanca, Morocco</span> with 8+ years building
-                  websites, SaaS products, and digital experiences that convert. Currently leading
-                  R&D engineering teams at{" "}
-                  <span style={{ color: "var(--text)", fontWeight: 600 }}>Cegid</span>, one of Europe&apos;s leading enterprise SaaS companies.
+                  <span style={{ color: "var(--text)" }}>Full-Stack Engineer & R&D Engineering Lead</span> with{" "}
+                  <span style={{ color: "var(--text)" }}>8+ years</span> shipping SaaS products, growth platforms,
+                  and AI-powered systems at scale. Currently leading R&D engineering at{" "}
+                  <span style={{ color: "var(--text)", fontWeight: 600 }}>Cegid</span> — one of Europe&apos;s top enterprise SaaS companies, trusted by 700,000+ businesses.
                 </p>
                 <p>
-                  I work with <span style={{ color: "var(--text)" }}>founders, startups, and growing businesses</span> to
-                  build everything from a single landing page to complete SaaS platforms. My stack covers
-                  the full spectrum — pixel-perfect React/Next.js frontends, robust Rails/Node backends,
-                  cloud infrastructure, AI integrations, and third-party API connections.
+                  I partner with <span style={{ color: "var(--text)" }}>CTOs, founders, and technical leaders</span> to
+                  compress time-to-market without sacrificing architecture. My stack spans the full critical path —
+                  React/Next.js frontends, Rails/Node.js APIs, PostgreSQL/Redis data layers,
+                  AWS/GCP cloud infra, LLM integrations, and third-party SaaS orchestration.
                 </p>
                 <p>
-                  What sets me apart is the combination of{" "}
-                  <span style={{ color: "var(--text)" }}>senior-level craftsmanship</span> and{" "}
-                  <span style={{ color: "var(--text)" }}>product-minded thinking</span> — I don&apos;t just write code,
-                  I help you ship the right product, fast, and built to grow.
+                  The differentiator:{" "}
+                  <span style={{ color: "var(--text)" }}>I operate at the intersection of engineering depth and product velocity</span>{" "}—
+                  I scope what to build, architect how to build it, and ship it to production. No hand-holding required.
                 </p>
               </div>
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: "var(--text-muted)" }}>How I Can Help You</p>
+              <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: "var(--text-muted)" }}>What I Deliver</p>
               <ul className="flex flex-col gap-2">
                 {helps.map(item => (
                   <li key={item} className="flex items-start gap-2.5 text-sm" style={{ color: "var(--text-muted)" }}>

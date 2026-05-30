@@ -44,7 +44,7 @@ const ServiceIcon = ({ id }: { id: string }) => {
 
 const services = heroServices;
 
-const TYPEWRITER_TEXT = "That Convert";
+const TYPEWRITER_TEXT = "& Ship Fast";
 
 function TypewriterText() {
   const [displayed, setDisplayed] = useState("");
@@ -159,11 +159,11 @@ export default function Hero() {
               className="text-4xl sm:text-5xl font-bold leading-[1.1] tracking-tight animate-fade-up"
               style={{ animationDelay: "120ms" }}
             >
-              <span className="text-gradient">I Build Websites,</span>
+              <span className="text-gradient">I Architect, Build,</span>
               <br />
-              <span style={{ color: "var(--text)" }}>SaaS Products &</span>
+              <span style={{ color: "var(--text)" }}>& Ship SaaS Products</span>
               <br />
-              <span className="text-gradient-coral">Digital Experiences</span>
+              <span className="text-gradient-coral">That Scale</span>
               <br />
               <TypewriterText />
             </h1>
@@ -173,9 +173,9 @@ export default function Hero() {
               className="text-slate-400 text-base sm:text-lg leading-relaxed max-w-lg animate-fade-up"
               style={{ animationDelay: "240ms" }}
             >
-              <span className="font-semibold" style={{ color: "var(--text)" }}>Team Leader R&D</span> at Cegid Atlas
-              with 8+ years of experience. I help founders, startups, and businesses ship
-              beautiful products — from landing pages to complex SaaS platforms.
+              <span className="font-semibold" style={{ color: "var(--text)" }}>R&D Engineering Lead</span> at Cegid —
+              Europe&apos;s enterprise SaaS leader. 8+ years shipping production systems for founders, CTOs,
+              and engineering teams across Web, SaaS, and AI.
             </p>
 
             {/* What I build */}
