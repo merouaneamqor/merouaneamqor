@@ -1,26 +1,188 @@
 @import "tailwindcss";
 
+/* ── Design tokens ─────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg:            #080B11;
+  --bg-card:       #0d1117;
+  --border:        rgba(255,255,255,0.07);
+  --border-strong: rgba(255,255,255,0.13);
+  --blue:          #3b82f6;
+  --cyan:          #22d3ee;
+  --indigo:        #6366f1;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ── Base ──────────────────────────────────────────────────── */
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: #f1f5f9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(59,130,246,0.25);
+    color: #93c5fd;
+  }
+
+  ::-webkit-scrollbar          { width: 5px; }
+  ::-webkit-scrollbar-track    { background: #080B11; }
+  ::-webkit-scrollbar-thumb    { background: #1e293b; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #334155; }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ── Utilities ─────────────────────────────────────────────── */
+@layer utilities {
+  /* Replaces max-w-7xl mx-auto px-6 — defined here so cascade layers don't interfere */
+  .site-container {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    width: 100%;
+  }
+
+  /* Centered narrow header block */
+  .section-header {
+    text-align: center;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3.5rem;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg,#f1f5f9 0%,#94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-blue {
+    background: linear-gradient(135deg,#60a5fa 0%,#38bdf8 50%,#22d3ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Subtle dot-grid background */
+  .grid-bg {
+    background-image:
+      radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  /* Frosted card surface */
+  .card-surface {
+    background: rgba(13,17,23,0.75);
+    border: 1px solid rgba(255,255,255,0.07);
+    backdrop-filter: blur(12px);
+    transition: border-color 0.2s;
+  }
+  .card-surface:hover {
+    border-color: rgba(255,255,255,0.13);
+  }
+
+  /* Nav blur */
+  .nav-blur {
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ── Keyframes (not in a layer — intentional, no utility conflict) ── */
+@keyframes status-pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
+  50%      { box-shadow: 0 0 0 5px rgba(34,197,94,0); }
 }
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-12px); }
+}
+@keyframes pulse-slow {
+  0%,100% { opacity: 0.35; }
+  50%     { opacity: 0.6; }
+}
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Futuristic keyframes ── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scan-beam {
+  0%   { top: -4px;   opacity: 0; }
+  5%   { opacity: 1; }
+  95%  { opacity: 0.6; }
+  100% { top: 100%;   opacity: 0; }
+}
+@keyframes orbit-ring {
+  to { transform: rotate(360deg); }
+}
+@keyframes orbit-ring-rev {
+  to { transform: rotate(-360deg); }
+}
+@keyframes glow-border-blue {
+  0%,100% { box-shadow: 0 0 0 1px rgba(59,130,246,0.25), 0 0 20px rgba(59,130,246,0.08); }
+  50%      { box-shadow: 0 0 0 1px rgba(99,102,241,0.5),  0 0 40px rgba(99,102,241,0.2), inset 0 0 20px rgba(59,130,246,0.05); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes cursor-blink {
+  0%,100% { opacity: 1; }
+  50%     { opacity: 0; }
+}
+@keyframes neon-cta {
+  0%,100% { box-shadow: 0 0 8px rgba(59,130,246,0.4), 0 4px 24px rgba(59,130,246,0.25); }
+  50%      { box-shadow: 0 0 20px rgba(99,102,241,0.7), 0 4px 40px rgba(59,130,246,0.4); }
+}
+@keyframes orb-drift-1 {
+  0%,100% { transform: translate(0, 0) scale(1); }
+  33%     { transform: translate(40px, -30px) scale(1.08); }
+  66%     { transform: translate(-20px, 20px) scale(0.95); }
+}
+@keyframes orb-drift-2 {
+  0%,100% { transform: translate(0, 0) scale(1); }
+  33%     { transform: translate(-50px, 20px) scale(0.92); }
+  66%     { transform: translate(30px, -40px) scale(1.06); }
+}
+@keyframes data-stream {
+  0%   { opacity: 0; transform: scaleY(0); transform-origin: top; }
+  10%  { opacity: 1; transform: scaleY(1); }
+  80%  { opacity: 0.4; }
+  100% { opacity: 0; }
+}
+@keyframes corner-ping {
+  0%   { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* ── Animation utilities ── */
+.status-pulse       { animation: status-pulse  2s ease-in-out infinite; }
+.animate-float      { animation: float         6s ease-in-out infinite; }
+.animate-pulse-slow { animation: pulse-slow    4s ease-in-out infinite; }
+.animate-fade-up    { animation: fade-up       0.6s cubic-bezier(0.16,1,0.3,1) both; }
+.animate-fade-in    { animation: fade-in       0.5s ease both; }
+.animate-glow-card  { animation: glow-border-blue 3s ease-in-out infinite; }
+.animate-neon-cta   { animation: neon-cta      2.5s ease-in-out infinite; }
+.animate-shimmer    {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.12) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s linear infinite;
+}
+.animate-cursor     { animation: cursor-blink  1s step-end infinite; }
+.animate-orbit      { animation: orbit-ring     8s linear infinite; }
+.animate-orbit-rev  { animation: orbit-ring-rev 12s linear infinite; }
+.animate-scan-beam  { animation: scan-beam     3s ease-in-out infinite; }
