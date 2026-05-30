@@ -165,7 +165,7 @@ export default function Hero() {
             >
               <span className="text-gradient">I Build Websites,</span>
               <br />
-              <span className="text-white">SaaS Products &</span>
+              <span style={{ color: "var(--text)" }}>SaaS Products &</span>
               <br />
               <span className="text-gradient-coral">Digital Experiences</span>
               <br />
@@ -177,7 +177,7 @@ export default function Hero() {
               className="text-slate-400 text-base sm:text-lg leading-relaxed max-w-lg animate-fade-up"
               style={{ animationDelay: "240ms" }}
             >
-              <span className="text-white font-semibold">Team Leader R&D</span> at Cegid Atlas
+              <span className="font-semibold" style={{ color: "var(--text)" }}>Team Leader R&D</span> at Cegid Atlas
               with 10+ years of experience. I help founders, startups, and businesses ship
               beautiful products — from landing pages to complex SaaS platforms.
             </p>
@@ -190,7 +190,10 @@ export default function Hero() {
               {services.map((s, i) => (
                 <span
                   key={s.label}
-                  className="relative inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/[0.08] text-slate-300 text-xs font-medium transition-all duration-300 hover:border-blue-500/30 hover:bg-blue-500/5 hover:text-white group overflow-hidden"
+                  className="relative inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300 group overflow-hidden"
+                  style={{ background: "var(--bg-card-alt)", border: "1px solid var(--border)", color: "var(--text-muted)" }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "var(--coral)"; (e.currentTarget as HTMLElement).style.color = "var(--coral)"; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "var(--border)"; (e.currentTarget as HTMLElement).style.color = "var(--text-muted)"; }}
                   style={{ animationDelay: `${i * 40}ms` }}
                 >
                   {/* shimmer on hover */}
@@ -248,57 +251,38 @@ export default function Hero() {
             style={{ animationDelay: "200ms" }}
           >
 
-            {/* Profile card with glow border + scan beam */}
-            <div className="relative rounded-2xl p-5 animate-glow-card overflow-hidden"
-              style={{
-                background: "rgba(13,17,23,0.85)",
-                border: "1px solid rgba(255,255,255,0.07)",
-                backdropFilter: "blur(12px)",
-              }}
-            >
-              {/* Corner brackets */}
+            {/* Profile card */}
+            <div className="card-surface relative rounded-2xl p-5 animate-glow-card overflow-hidden">
               <Corners />
 
-              {/* Scan beam */}
+              {/* Scan beam — coral */}
               <div
                 className="absolute left-0 right-0 h-[2px] pointer-events-none z-10"
                 style={{
-                  background: "linear-gradient(90deg, transparent, rgba(99,102,241,0.5), rgba(34,211,238,0.8), rgba(99,102,241,0.5), transparent)",
+                  background: "linear-gradient(90deg, transparent, rgba(204,87,51,0.5), rgba(232,119,74,0.8), rgba(204,87,51,0.5), transparent)",
                   animation: "scan-beam 4s ease-in-out infinite",
                 }}
               />
 
               <div className="flex items-start gap-4 mb-4">
-                {/* Avatar with orbit rings */}
                 <div className="relative shrink-0 w-14 h-14">
-                  {/* outer orbit ring */}
-                  <div
-                    className="absolute inset-[-8px] rounded-full border border-dashed border-blue-500/25 animate-orbit"
-                    style={{ animationDuration: "10s" }}
-                  />
-                  {/* inner orbit ring */}
-                  <div
-                    className="absolute inset-[-3px] rounded-full border border-indigo-500/20 animate-orbit-rev"
-                    style={{ animationDuration: "7s" }}
-                  />
-                  <div className="w-14 h-14 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg relative z-10" style={{ background: "linear-gradient(135deg, var(--coral) 0%, var(--coral-light) 100%)", boxShadow: "0 4px 16px rgba(204,87,51,0.3)" }}>
+                  <div className="absolute inset-[-8px] rounded-full border border-dashed animate-orbit" style={{ borderColor: "rgba(204,87,51,0.25)", animationDuration: "10s" }} />
+                  <div className="absolute inset-[-3px] rounded-full border animate-orbit-rev" style={{ borderColor: "rgba(204,87,51,0.15)", animationDuration: "7s" }} />
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center text-white font-bold text-lg relative z-10" style={{ background: "linear-gradient(135deg, var(--coral) 0%, var(--coral-light) 100%)", boxShadow: "0 4px 16px rgba(204,87,51,0.3)" }}>
                     MA
                   </div>
-                  <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-emerald-400 border-2 border-[#0d1117] status-pulse z-20" />
+                  <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-emerald-400 border-2 border-[var(--bg-card)] status-pulse z-20" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold">Merouane Amqor</p>
+                  <p className="font-semibold text-[var(--text)]">Merouane Amqor</p>
                   <p className="text-sm font-medium" style={{ color: "var(--coral)" }}>Full-Stack Dev · Team Leader R&D</p>
-                  <p className="text-slate-500 text-xs mt-0.5">@ Cegid · Casablanca, Morocco</p>
+                  <p className="text-[var(--text-muted)] text-xs mt-0.5">@ Cegid · Casablanca, Morocco</p>
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-1.5 pb-4 mb-4 border-b border-white/[0.06]">
+              <div className="flex flex-wrap gap-1.5 pb-4 mb-4" style={{ borderBottom: "1px solid var(--border)" }}>
                 {badges.map(b => (
-                  <span
-                    key={b.label}
-                    className={`relative px-2 py-0.5 text-xs border rounded-md font-medium overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_10px_rgba(99,102,241,0.3)] group ${b.color}`}
-                  >
+                  <span key={b.label} className="relative px-2 py-0.5 text-xs rounded-md font-medium border overflow-hidden transition-all duration-300 hover:scale-105 group" style={{ borderColor: "var(--border-strong)", color: "var(--coral)", background: "var(--coral-dim)" }}>
                     <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer" />
                     <span className="relative">{b.label}</span>
                   </span>
@@ -306,17 +290,10 @@ export default function Hero() {
               </div>
 
               <div className="grid grid-cols-3 gap-3 text-center">
-                {[
-                  { val: "10+", label: "Years",    shadow: "rgba(204,87,51,0.3)" },
-                  { val: "80+", label: "Projects", shadow: "rgba(204,87,51,0.2)" },
-                  { val: "5★",  label: "Rated",    shadow: "rgba(204,87,51,0.25)" },
-                ].map(s => (
-                  <div
-                    key={s.label}
-                    className="rounded-lg bg-white/[0.03] border border-white/[0.05] py-2.5 transition-all duration-300 hover:border-white/10 hover:bg-white/[0.06]"
-                  >
-                    <p className="font-bold text-base" style={{ color: "var(--coral)", textShadow: `0 0 12px ${s.shadow}` }}>{s.val}</p>
-                    <p className="text-slate-600 text-xs">{s.label}</p>
+                {["10+ Years", "80+ Projects", "5★ Rated"].map(t => (
+                  <div key={t} className="rounded-lg py-2.5 transition-all duration-300" style={{ background: "var(--bg-card-alt)", border: "1px solid var(--border)" }}>
+                    <p className="font-bold text-base" style={{ color: "var(--coral)" }}>{t.split(" ")[0]}</p>
+                    <p className="text-xs" style={{ color: "var(--text-muted)" }}>{t.split(" ").slice(1).join(" ")}</p>
                   </div>
                 ))}
               </div>
@@ -327,17 +304,12 @@ export default function Hero() {
               {stats.map((s, i) => (
                 <div
                   key={s.label}
-                  className="relative rounded-xl px-4 py-3 overflow-hidden group transition-all duration-300 hover:scale-[1.02]"
-                  style={{
-                    background: "rgba(13,17,23,0.75)",
-                    border: "1px solid rgba(255,255,255,0.07)",
-                    backdropFilter: "blur(12px)",
-                    animationDelay: `${i * 80}ms`,
-                  }}
+                  className="card-surface relative rounded-xl px-4 py-3 overflow-hidden group transition-all duration-300 hover:scale-[1.02]"
+                  style={{ animationDelay: `${i * 80}ms` }}
                 >
                   <Corners />
                   <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-shimmer" />
-                  <p className="text-xl font-bold text-white tabular-nums relative" style={{ textShadow: "0 0 20px rgba(99,102,241,0.4)" }}>
+                  <p className="text-xl font-bold tabular-nums relative" style={{ color: "var(--text)", textShadow: "0 0 20px rgba(204,87,51,0.2)" }}>
                     <CountUp target={s.value} suffix={s.suffix} />
                   </p>
                   <p className="text-xs text-slate-500 mt-0.5 relative">{s.label}</p>
