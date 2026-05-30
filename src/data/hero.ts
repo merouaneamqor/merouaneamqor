@@ -1,3 +1,12 @@
+export const heroServices = [
+  { icon: "globe",     label: "Websites" },
+  { icon: "arrow-up", label: "Landing Pages" },
+  { icon: "cube",     label: "SaaS Products" },
+  { icon: "chip",     label: "AI Integration" },
+  { icon: "users",    label: "Tech Leadership" },
+  { icon: "link",     label: "API & Integrations" },
+];
+
 export const stats = [
   { value: 10,  suffix: "+", label: "Years Exp." },
   { value: 80,  suffix: "+", label: "Projects Done" },

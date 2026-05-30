@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { stats, badges } from "@/data/hero";
+import { stats, badges, heroServices } from "@/data/hero";
 
 function CountUp({ target, suffix }: { target: number; suffix: string }) {
   const [count, setCount] = useState(0);
@@ -40,14 +40,7 @@ const ServiceIcon = ({ id }: { id: string }) => {
   return null;
 };
 
-const services = [
-  { icon: "globe",    label: "Websites" },
-  { icon: "arrow-up", label: "Landing Pages" },
-  { icon: "cube",     label: "SaaS Products" },
-  { icon: "chip",     label: "AI Integration" },
-  { icon: "users",    label: "Tech Leadership" },
-  { icon: "link",     label: "API & Integrations" },
-];
+const services = heroServices;
 
 const TYPEWRITER_TEXT = "That Convert";
 
@@ -186,10 +179,9 @@ export default function Hero() {
                 <span
                   key={s.label}
                   className="relative inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300 group overflow-hidden"
-                  style={{ background: "var(--bg-card-alt)", border: "1px solid var(--border)", color: "var(--text-muted)" }}
+                  style={{ background: "var(--bg-card-alt)", border: "1px solid var(--border)", color: "var(--text-muted)", animationDelay: `${i * 40}ms` }}
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "var(--coral)"; (e.currentTarget as HTMLElement).style.color = "var(--coral)"; }}
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "var(--border)"; (e.currentTarget as HTMLElement).style.color = "var(--text-muted)"; }}
-                  style={{ animationDelay: `${i * 40}ms` }}
                 >
                   {/* shimmer on hover */}
                   <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer" />
