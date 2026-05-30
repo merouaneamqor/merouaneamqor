@@ -54,7 +54,7 @@ export default function Contributions() {
                     ? "Senior Full-Stack Engineer building scalable healthcare platforms connecting patients with doctors across Africa & MENA."
                     : org.name === "Solocal"
                     ? "Full-Stack Engineer delivering digital presence solutions for 400,000+ French SMBs — websites, SEO, and local marketing platforms."
-                    : "Open source contributor to ByteDance's engineering ecosystem — tooling, infrastructure, and developer experience initiatives."}
+                    : "Helped establish ByteDance's MENA engineering team — building culturally-adapted workflows and productivity systems for the region's market."}
                 </p>
               </div>
             </a>

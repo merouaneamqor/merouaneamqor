@@ -1,8 +1,8 @@
 export const orgs = [
   { name: "Cegid",         logo: "/logo-cegid.png",                               url: "https://www.cegid.com",                     wordmark: true,  tag: "R&D Engineering Lead"    },
   { name: "DabaDoc",       logo: "/logo-dabadoc.png",                             url: "https://www.dabadoc.com",                   wordmark: true,  tag: "Senior Full-Stack Engineer" },
+  { name: "ByteDance",     logo: "/logo-bytedance.svg",                           url: "https://www.bytedance.com",                 wordmark: true,  tag: "MENA Engineering Consultant" },
   { name: "Solocal",       logo: "/logo-solocal.png",                             url: "https://www.solocal.com",                   wordmark: true,  tag: "Full-Stack Engineer" },
-  { name: "ByteDance",     logo: "/logo-bytedance.svg",                           url: "https://www.bytedance.com",                 wordmark: true,  tag: "Open Source Contributor" },
   { name: "Shopify",       logo: "https://cdn.simpleicons.org/shopify/6B7280",    url: "https://github.com/Shopify/identity_cache", wordmark: false, tag: "Open Source Contributor" },
   { name: "Basecamp",      logo: "https://cdn.simpleicons.org/basecamp/6B7280",   url: "https://github.com/basecamp/omarchy",       wordmark: false, tag: "Open Source Contributor" },
   { name: "Google",        logo: "https://cdn.simpleicons.org/google/6B7280",     url: "https://github.com/google/libphonenumber",  wordmark: false, tag: "Open Source Contributor" },
