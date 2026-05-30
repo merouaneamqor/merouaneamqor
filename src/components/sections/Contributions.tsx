@@ -25,7 +25,7 @@ export default function Contributions() {
         </div>
 
         {/* Featured — employer cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
           {featured.map(org => (
             <a
               key={org.name}
@@ -52,7 +52,9 @@ export default function Contributions() {
                     ? "Leading R&D engineering teams at one of Europe's top enterprise SaaS companies — 700,000+ businesses across finance, HR & retail."
                     : org.name === "DabaDoc"
                     ? "Senior Full-Stack Engineer building scalable healthcare platforms connecting patients with doctors across Africa & MENA."
-                    : "Full-Stack Engineer delivering digital presence solutions for 400,000+ French SMBs — websites, SEO, and local marketing platforms."}
+                    : org.name === "Solocal"
+                    ? "Full-Stack Engineer delivering digital presence solutions for 400,000+ French SMBs — websites, SEO, and local marketing platforms."
+                    : "Open source contributor to ByteDance's engineering ecosystem — tooling, infrastructure, and developer experience initiatives."}
                 </p>
               </div>
             </a>
