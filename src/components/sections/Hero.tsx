@@ -72,54 +72,50 @@ function TypewriterText() {
     return () => clearTimeout(delay);
   }, []);
   return (
-    <span className="text-gradient-blue inline-flex items-baseline gap-0.5">
+    <span className="text-gradient-coral inline-flex items-baseline gap-0.5">
       {displayed}
       {!done && (
-        <span className="animate-cursor inline-block w-0.5 h-[0.85em] bg-cyan-400 ml-0.5 align-baseline" />
+        <span className="animate-cursor inline-block w-0.5 h-[0.85em] ml-0.5 align-baseline" style={{ background: "var(--coral)" }} />
       )}
     </span>
   );
 }
 
-/* Animated background orbs */
+/* Animated background orbs — Anthropic coral/warm palette */
 function BgOrbs() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
-      {/* top-center blue radial */}
       <div
-        className="absolute rounded-full blur-[120px] opacity-20"
+        className="absolute rounded-full blur-[140px] opacity-[0.18] dark:opacity-25"
         style={{
           width: 600, height: 600,
           top: "-15%", left: "30%",
-          background: "radial-gradient(circle, #3b82f6 0%, #6366f1 60%, transparent 100%)",
+          background: "radial-gradient(circle, #CC5733 0%, #E8774A 60%, transparent 100%)",
           animation: "orb-drift-1 18s ease-in-out infinite",
         }}
       />
-      {/* right cyan orb */}
       <div
-        className="absolute rounded-full blur-[100px] opacity-15"
+        className="absolute rounded-full blur-[100px] opacity-[0.12] dark:opacity-20"
         style={{
           width: 400, height: 400,
           top: "20%", right: "-5%",
-          background: "radial-gradient(circle, #22d3ee 0%, #3b82f6 70%, transparent 100%)",
+          background: "radial-gradient(circle, #E8774A 0%, #CC5733 70%, transparent 100%)",
           animation: "orb-drift-2 22s ease-in-out infinite",
         }}
       />
-      {/* bottom-left indigo orb */}
       <div
-        className="absolute rounded-full blur-[140px] opacity-10"
+        className="absolute rounded-full blur-[160px] opacity-[0.08] dark:opacity-12"
         style={{
           width: 500, height: 500,
           bottom: "-10%", left: "-5%",
-          background: "radial-gradient(circle, #6366f1 0%, transparent 70%)",
+          background: "radial-gradient(circle, #CC5733 0%, transparent 70%)",
           animation: "orb-drift-1 26s ease-in-out infinite reverse",
         }}
       />
-      {/* Subtle horizontal scan line sweeping the page */}
       <div
         className="absolute left-0 right-0 h-px pointer-events-none"
         style={{
-          background: "linear-gradient(90deg, transparent, rgba(99,102,241,0.4), rgba(34,211,238,0.6), rgba(99,102,241,0.4), transparent)",
+          background: "linear-gradient(90deg, transparent, rgba(204,87,51,0.35), rgba(232,119,74,0.5), rgba(204,87,51,0.35), transparent)",
           animation: "scan-beam 6s ease-in-out infinite",
         }}
       />
@@ -145,8 +141,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden grid-bg">
       <BgOrbs />
 
-      {/* Extra top gradient */}
-      <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 80% 60% at 50% -10%, rgba(59,130,246,0.15) 0%, transparent 70%)" }} />
+      <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 80% 60% at 50% -10%, rgba(204,87,51,0.1) 0%, transparent 70%)" }} />
 
       <div className="site-container pt-28 pb-20 relative">
         <div className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center">
@@ -156,7 +151,7 @@ export default function Hero() {
 
             {/* Availability chip */}
             <div
-              className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full border border-emerald-500/25 bg-emerald-500/8 text-emerald-400 text-xs font-medium animate-fade-up"
+              className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full border border-emerald-500/25 bg-emerald-500/8 text-emerald-600 dark:text-emerald-400 text-xs font-medium animate-fade-up"
               style={{ animationDelay: "0ms" }}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 status-pulse shrink-0" />
@@ -172,7 +167,7 @@ export default function Hero() {
               <br />
               <span className="text-white">SaaS Products &</span>
               <br />
-              <span className="text-gradient-blue">Digital Experiences</span>
+              <span className="text-gradient-coral">Digital Experiences</span>
               <br />
               <TypewriterText />
             </h1>
@@ -213,7 +208,7 @@ export default function Hero() {
             >
               <a
                 href="#contact"
-                className="relative inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-xl transition-colors animate-neon-cta overflow-hidden group"
+                className="relative inline-flex items-center gap-2 px-6 py-3 text-white text-sm font-semibold rounded-xl transition-all animate-neon-cta overflow-hidden group btn-coral"
               >
                 <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer" />
                 <svg className="relative w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -221,7 +216,7 @@ export default function Hero() {
                 </svg>
                 <span className="relative">Book a Free Call</span>
               </a>
-              <a href="#case-studies" className="inline-flex items-center gap-2 px-6 py-3 border border-white/10 hover:border-blue-500/40 text-slate-300 hover:text-white text-sm font-medium rounded-xl transition-all hover:bg-blue-500/5 hover:shadow-[0_0_20px_rgba(59,130,246,0.1)]">
+              <a href="#case-studies" className="inline-flex items-center gap-2 px-6 py-3 border border-[var(--border)] hover:border-[var(--coral)] text-slate-500 dark:text-slate-300 hover:text-[var(--coral)] text-sm font-medium rounded-xl transition-all hover:bg-[var(--coral-dim)]">
                 See My Work
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -286,14 +281,14 @@ export default function Hero() {
                     className="absolute inset-[-3px] rounded-full border border-indigo-500/20 animate-orbit-rev"
                     style={{ animationDuration: "7s" }}
                   />
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-600/30 relative z-10">
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg relative z-10" style={{ background: "linear-gradient(135deg, var(--coral) 0%, var(--coral-light) 100%)", boxShadow: "0 4px 16px rgba(204,87,51,0.3)" }}>
                     MA
                   </div>
                   <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-emerald-400 border-2 border-[#0d1117] status-pulse z-20" />
                 </div>
                 <div>
                   <p className="text-white font-semibold">Merouane Amqor</p>
-                  <p className="text-blue-400 text-sm font-medium">Full-Stack Dev · Team Leader R&D</p>
+                  <p className="text-sm font-medium" style={{ color: "var(--coral)" }}>Full-Stack Dev · Team Leader R&D</p>
                   <p className="text-slate-500 text-xs mt-0.5">@ Cegid · Casablanca, Morocco</p>
                 </div>
               </div>
@@ -312,15 +307,15 @@ export default function Hero() {
 
               <div className="grid grid-cols-3 gap-3 text-center">
                 {[
-                  { val: "10+", label: "Years",    color: "text-blue-400",   shadow: "rgba(59,130,246,0.3)" },
-                  { val: "80+", label: "Projects", color: "text-indigo-400", shadow: "rgba(99,102,241,0.3)" },
-                  { val: "5★",  label: "Rated",    color: "text-cyan-400",   shadow: "rgba(34,211,238,0.3)" },
+                  { val: "10+", label: "Years",    shadow: "rgba(204,87,51,0.3)" },
+                  { val: "80+", label: "Projects", shadow: "rgba(204,87,51,0.2)" },
+                  { val: "5★",  label: "Rated",    shadow: "rgba(204,87,51,0.25)" },
                 ].map(s => (
                   <div
                     key={s.label}
                     className="rounded-lg bg-white/[0.03] border border-white/[0.05] py-2.5 transition-all duration-300 hover:border-white/10 hover:bg-white/[0.06]"
                   >
-                    <p className={`${s.color} font-bold text-base`} style={{ textShadow: `0 0 12px ${s.shadow}` }}>{s.val}</p>
+                    <p className="font-bold text-base" style={{ color: "var(--coral)", textShadow: `0 0 12px ${s.shadow}` }}>{s.val}</p>
                     <p className="text-slate-600 text-xs">{s.label}</p>
                   </div>
                 ))}
