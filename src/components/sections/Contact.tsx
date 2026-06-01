@@ -22,7 +22,22 @@ export default function Contact() {
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    await new Promise(r => setTimeout(r, 1000));
+
+    const msg = [
+      `📋 *New Project Brief*`,
+      ``,
+      `👤 *Name:* ${form.name}`,
+      `📧 *Email:* ${form.email}`,
+      form.company ? `🏢 *Company:* ${form.company}` : null,
+      form.budget  ? `💰 *Budget:* ${form.budget}`   : null,
+      ``,
+      `💬 *Message:*`,
+      form.message,
+    ].filter(l => l !== null).join("\n");
+
+    const url = `https://wa.me/212701086726?text=${encodeURIComponent(msg)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+
     setSubmitting(false);
     setDone(true);
   };
