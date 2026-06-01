@@ -162,7 +162,7 @@ export default function Hero() {
               <div className="px-5 pt-5 pb-4" style={{ borderBottom: "1px solid var(--border)" }}>
                 <div className="flex items-center gap-4">
                   <div className="relative shrink-0">
-                    <div className="w-14 h-14 rounded-xl overflow-hidden" style={{ boxShadow: "0 0 0 2px var(--border-strong)" }}>
+                    <div className="relative w-14 h-14 rounded-xl overflow-hidden" style={{ boxShadow: "0 0 0 2px var(--border-strong)" }}>
                       <Image src="/avatar.jpg" alt="Merouane Amqor" fill className="object-cover object-top" />
                     </div>
                     <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-400 border-2 border-[var(--bg-card)]" />
