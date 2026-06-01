@@ -2,17 +2,8 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
 import { availabilityStatus } from "@/data/contact";
-
-const navLinks = [
-  { label: "About",        href: "#about" },
-  { label: "Services",     href: "#services" },
-  { label: "Skills",       href: "#skills" },
-  { label: "Experience",   href: "#experience" },
-  { label: "Case Studies", href: "#case-studies" },
-  { label: "Contact",      href: "#contact" },
-];
+import { navLinks } from "@/data/navigation";
 
 function SunIcon() {
   return (
@@ -101,7 +92,7 @@ export default function Navbar() {
 
   function close() { setMobileOpen(false); }
 
-  const bg = dark ? "rgba(8,11,17,0.88)" : "rgba(248,250,252,0.88)";
+  const bg = dark ? "rgba(14,13,12,0.92)" : "rgba(250,249,246,0.92)";
 
   return (
     <>
@@ -133,7 +124,7 @@ export default function Navbar() {
             </div>
             <div className="hidden sm:block">
               <p className="text-sm font-semibold leading-tight" style={{ color: "var(--text)" }}>Merouane Amqor</p>
-              <p className="text-[10px] leading-tight" style={{ color: "var(--text-muted)" }}>Research & Development Expert</p>
+              <p className="text-[10px] leading-tight" style={{ color: "var(--text-muted)" }}>R&D Engineering Lead · Cegid</p>
             </div>
           </a>
 
@@ -169,14 +160,14 @@ export default function Navbar() {
           {/* Desktop right */}
           <div className="hidden md:flex items-center gap-3 shrink-0">
             <div className="flex items-center gap-1.5 text-xs" style={{ color: "var(--text-muted)" }}>
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 status-pulse inline-block" />
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block" />
               <span className="text-emerald-600 dark:text-emerald-400">Available</span>
             </div>
             <a
               href="#contact"
               className="px-4 py-2 text-sm font-semibold text-white rounded-lg transition-all btn-coral"
             >
-              Book a Call
+              Start a Project
             </a>
             <button
               onClick={toggleTheme}
@@ -252,7 +243,7 @@ export default function Navbar() {
             </div>
             <div>
               <p className="text-sm font-semibold leading-tight" style={{ color: "var(--text)" }}>Merouane Amqor</p>
-              <p className="text-[10px] leading-tight" style={{ color: "var(--text-muted)" }}>Team Leader R&D</p>
+              <p className="text-[10px] leading-tight" style={{ color: "var(--text-muted)" }}>R&D Engineering Lead · Cegid</p>
             </div>
           </a>
           <button
@@ -306,7 +297,7 @@ export default function Navbar() {
               transition: `opacity 300ms ease ${navLinks.length * 40 + 100}ms`,
             }}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 status-pulse inline-block" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block" />
             <span className="text-emerald-600 dark:text-emerald-400">{availabilityStatus.label}</span>
           </div>
           <a
@@ -319,7 +310,7 @@ export default function Navbar() {
               transition: `opacity 300ms ease ${navLinks.length * 40 + 140}ms, transform 300ms ease ${navLinks.length * 40 + 140}ms`,
             }}
           >
-            Book a Free Call
+            Start a Project Brief
           </a>
         </div>
       </div>

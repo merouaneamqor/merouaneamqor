@@ -5,85 +5,167 @@ import { orgs } from "@/data/contributions";
 const featured = orgs.filter(o => o.wordmark);
 const community = orgs.filter(o => !o.wordmark);
 
+const DESCRIPTIONS: Record<string, { metric: string; body: string }> = {
+  Cegid: {
+    metric: "700k+ businesses",
+    body: "Leading R&D engineering teams at Europe's top enterprise SaaS platform — finance, HR & retail verticals.",
+  },
+  DabaDoc: {
+    metric: "MENA-scale platform",
+    body: "Built scalable healthcare infrastructure connecting patients with doctors across Africa & MENA.",
+  },
+  ByteDance: {
+    metric: "MENA market entry",
+    body: "Established MENA engineering workflows and culturally-adapted productivity systems for regional scale.",
+  },
+  Solocal: {
+    metric: "400k+ French SMBs",
+    body: "Shipped digital presence stack — websites, SEO, and local marketing platforms for French businesses.",
+  },
+};
+
 export default function Contributions() {
   return (
-    <section className="py-16 relative">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--border-strong)] to-transparent" />
+    <section className="py-20 relative overflow-hidden">
+      <div className="absolute inset-x-0 top-0 h-px" style={{ background: "linear-gradient(90deg, transparent, var(--border-strong), transparent)" }} />
 
       <div className="site-container">
-        <div className="text-center mb-12 max-w-xl mx-auto">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border mb-4" style={{ background: "var(--coral-dim)", color: "var(--coral)", borderColor: "rgba(204,87,51,0.2)" }}>
-            Experience & Contributions
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3" style={{ color: "var(--text)" }}>
-            Companies &{" "}
-            <span className="text-gradient-coral">Projects I've Shaped</span>
-          </h2>
-          <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-            From enterprise SaaS leadership to open-source contributions across the Rails & JS ecosystem.
+
+        {/* ── Header ── */}
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-3">
+              <span
+                className="text-[10px] font-bold uppercase tracking-[0.2em] px-2.5 py-1 rounded"
+                style={{ background: "var(--coral-dim)", color: "var(--coral)", border: "1px solid rgba(204,87,51,0.2)", fontFamily: "monospace" }}
+              >
+                Track Record
+              </span>
+              <span className="text-[10px] font-medium uppercase tracking-widest" style={{ color: "var(--text-muted)", fontFamily: "monospace" }}>
+                8+ yrs · 4 companies · 80+ products
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight leading-none" style={{ color: "var(--text)" }}>
+              Companies &amp; Projects<br />
+              <span className="text-gradient-coral">I've Shaped</span>
+            </h2>
+          </div>
+          <p className="text-sm max-w-xs text-right hidden sm:block" style={{ color: "var(--text-muted)" }}>
+            Enterprise SaaS leadership to open-source contributions across the Rails &amp; JS ecosystem.
           </p>
         </div>
 
-        {/* Featured — employer cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
-          {featured.map(org => (
-            <a
-              key={org.name}
-              href={org.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group card-surface rounded-2xl p-8 flex flex-col gap-5 transition-all duration-300 hover:scale-[1.02]"
-              style={{ borderColor: "var(--border)" }}
-            >
-              <div className="flex items-center justify-between">
-                <img
-                  src={org.logo}
-                  alt={org.name}
-                  className="h-8 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
-                />
-                <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-1 group-hover:translate-x-0" style={{ color: "var(--coral)" }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </div>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: "var(--coral)" }}>{org.tag}</p>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                  {org.name === "Cegid"
-                    ? "Leading R&D engineering teams at one of Europe's top enterprise SaaS companies — 700,000+ businesses across finance, HR & retail."
-                    : org.name === "DabaDoc"
-                    ? "Senior Full-Stack Engineer building scalable healthcare platforms connecting patients with doctors across Africa & MENA."
-                    : org.name === "Solocal"
-                    ? "Full-Stack Engineer delivering digital presence solutions for 400,000+ French SMBs — websites, SEO, and local marketing platforms."
-                    : "Helped establish ByteDance's MENA engineering team — building culturally-adapted workflows and productivity systems for the region's market."}
-                </p>
-              </div>
-            </a>
-          ))}
+        {/* ── Employer cards ── */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+          {featured.map((org) => {
+            const info = DESCRIPTIONS[org.name];
+            return (
+              <a
+                key={org.name}
+                href={org.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex flex-col justify-between gap-6 rounded-2xl p-6 overflow-hidden transition-all duration-200"
+                style={{
+                  background: "var(--bg-card)",
+                  border: "1px solid var(--border)",
+                  boxShadow: "inset 3px 0 0 var(--coral)",
+                }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(204,87,51,0.35)";
+                  (e.currentTarget as HTMLElement).style.background = "var(--bg-card-alt)";
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLElement).style.borderColor = "var(--border)";
+                  (e.currentTarget as HTMLElement).style.background = "var(--bg-card)";
+                }}
+              >
+                {/* Top row */}
+                <div className="flex items-start justify-between gap-2">
+                  <img
+                    src={org.logo}
+                    alt={org.name}
+                    className="h-7 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                  <svg
+                    className="w-3.5 h-3.5 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                    style={{ color: "var(--coral)" }}
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </div>
+
+                {/* Bottom block */}
+                <div className="flex flex-col gap-2">
+                  {/* Role tag */}
+                  <span
+                    className="self-start text-[9px] font-bold uppercase tracking-[0.18em] px-2 py-0.5 rounded-sm"
+                    style={{ fontFamily: "monospace", background: "var(--coral-dim)", color: "var(--coral)" }}
+                  >
+                    {org.tag}
+                  </span>
+                  {/* Metric */}
+                  {info && (
+                    <p className="text-[11px] font-semibold" style={{ color: "var(--coral)" }}>{info.metric}</p>
+                  )}
+                  {/* Description */}
+                  <p className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                    {info?.body ?? ""}
+                  </p>
+                </div>
+              </a>
+            );
+          })}
         </div>
 
-        {/* Open source grid */}
-        <div className="card-surface rounded-2xl p-6">
-          <p className="text-xs font-semibold uppercase tracking-wider mb-5" style={{ color: "var(--text-muted)" }}>Open Source Contributions</p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-4">
+        {/* ── Open source roster ── */}
+        <div
+          className="rounded-2xl px-6 py-5"
+          style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}
+        >
+          <div className="flex items-center gap-3 mb-5">
+            <span
+              className="text-[9px] font-bold uppercase tracking-[0.2em] px-2 py-0.5 rounded-sm"
+              style={{ fontFamily: "monospace", background: "var(--bg-card-alt)", color: "var(--text-muted)", border: "1px solid var(--border)" }}
+            >
+              Field Contributions
+            </span>
+            <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
+            <span className="text-[10px]" style={{ color: "var(--text-muted)", fontFamily: "monospace" }}>
+              {community.length} repositories
+            </span>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2">
             {community.map(org => (
               <a
                 key={org.name}
                 href={org.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col items-center gap-3 p-4 rounded-xl border transition-all duration-300 hover:border-[var(--coral)] hover:bg-[var(--coral-dim)]"
+                className="group flex items-center gap-2.5 px-3 py-2.5 rounded-xl border transition-colors duration-150"
                 style={{ borderColor: "var(--border)", background: "var(--bg-card-alt)" }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(204,87,51,0.35)";
+                  (e.currentTarget as HTMLElement).style.background = "var(--coral-dim)";
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLElement).style.borderColor = "var(--border)";
+                  (e.currentTarget as HTMLElement).style.background = "var(--bg-card-alt)";
+                }}
               >
                 <img
                   src={org.logo}
                   alt={org.name}
-                  className="w-8 h-8 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className="w-4 h-4 object-contain shrink-0 grayscale group-hover:grayscale-0 transition-all duration-200"
                 />
-                <span className="text-xs font-medium text-center leading-tight" style={{ color: "var(--text-muted)" }}>{org.name}</span>
+                <span className="text-[11px] font-medium truncate" style={{ color: "var(--text-muted)" }}>{org.name}</span>
               </a>
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );
