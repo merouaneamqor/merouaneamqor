@@ -23,20 +23,18 @@ export default function Contact() {
     e.preventDefault();
     setSubmitting(true);
 
-    const msg = [
-      `📋 *New Project Brief*`,
+    const subject = `Project Brief from ${form.name}${form.company ? ` · ${form.company}` : ""}`;
+    const body = [
+      `Name: ${form.name}`,
+      `Email: ${form.email}`,
+      form.company ? `Company: ${form.company}` : null,
+      form.budget  ? `Budget: ${form.budget}`   : null,
       ``,
-      `👤 *Name:* ${form.name}`,
-      `📧 *Email:* ${form.email}`,
-      form.company ? `🏢 *Company:* ${form.company}` : null,
-      form.budget  ? `💰 *Budget:* ${form.budget}`   : null,
-      ``,
-      `💬 *Message:*`,
+      `Message:`,
       form.message,
     ].filter(l => l !== null).join("\n");
 
-    const url = `https://wa.me/212701086726?text=${encodeURIComponent(msg)}`;
-    window.open(url, "_blank", "noopener,noreferrer");
+    window.location.href = `mailto:marouane.amqor@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     setSubmitting(false);
     setDone(true);
